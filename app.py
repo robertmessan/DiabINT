@@ -6,6 +6,8 @@ import numpy as np
 import datetime as dt
 import altair as alt
 
+im1=Image.open("images/photo robert.jpg")
+st.set_page_config(page_title="Robert",page_icon=im1, layout="wide")
 @st.cache_data#(allow_output_mutation=True)
 def load(scaler_path, model_path):
     sc = joblib.load(scaler_path)
