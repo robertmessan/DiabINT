@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib
+import pickle
 import pandas as pd
 from PIL import Image
 import numpy as np
@@ -10,8 +10,10 @@ im1=Image.open("data/diabetes_image.jpg")
 st.set_page_config(page_title="DiabINT_SudParis",page_icon=im1, layout="wide")
 @st.cache_data#(allow_output_mutation=True)
 def load(scaler_path, model_path):
-    sc = joblib.load(scaler_path)
-    model = joblib.load(model_path)
+    with open(scaler_path, "rb") as scaler:
+        sc = pickle.load(scaler)
+    with open(model_path, "rb") as model:
+        model = pickle.load(model)
     return sc , model
 
 def inference(row, scaler, model, feat_cols):
