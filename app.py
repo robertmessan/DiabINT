@@ -48,7 +48,7 @@ row = [pregnancies, glucose, bloodpressure, skinthickness, insulin, bmi, dpf, ag
 if (st.button('Voir les résultats')):
     feat_cols = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
 
-    sc, model = load('models/scaler.joblib', 'models/model.joblib')
+    sc, model = load('models/scaler.pkl', 'models/model.pkl')
     result = inference(row, sc, model, feat_cols)
     st.write(result)
 
