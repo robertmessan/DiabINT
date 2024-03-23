@@ -13,7 +13,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 # Load data
-foods_df = pd.read_csv('./data/food_dataset.csv')
+foods_df = pd.read_csv('data/food_dataset.csv')
 
 def check_veg(row):
     if "veg" in row["Veg_Non"].lower():
