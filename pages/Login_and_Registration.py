@@ -31,7 +31,7 @@ def hash_password(password):
     return hex_dig
 
 
-pickle_in = open('./pages/logisticRegr.pkl', 'rb')
+pickle_in = open('models/logisticRegr.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 
