@@ -8,8 +8,8 @@ classifier = pickle.load(pickle_in)
 # Define the questions and answer options
 questions = ["Gender", "Polyuria (Excessive passage of Urine)", "Polydipsia (Excessive thirst)", "Sudden weight loss", "Weakness", "Polyphagia (Feeling of extreme, insatiable hunger)", "Visual blurring", "Itching", "Irritability", "Delayed healing", "Partial paresis (Weakening of a muscle)", "Muscle stiffness", "Alopecia (Baldness)", "Obesity (Excessive amount of body fat)"]
 options = {
-    "Gender": ["Male", "Female"],
-    "Polyuria (Excessive passage of Urine)": ["Yes", "No"],
+    "Genre": ["Masculin", "Feminin"],
+    "Polyurie (émission excessive d'urine)": ["Oui", "Non"],
     "Polydipsia (Excessive thirst)": ["Yes", "No"],
     "Sudden weight loss": ["Yes", "No"],
     "Weakness": ["Yes", "No"],
@@ -28,10 +28,10 @@ options = {
 # st.title("Predict DIABETES with some simple questions")
 html_temp = """
                     <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
-                    <h3 style="color:#000;text-align:center;">Predict <span style="color:red;font-size:35px;">DIABETES</span> with some "Simple Questions"</h3>
+                    <h3 style="color:#000;text-align:center;">Faire mon test du <span style="color:red;font-size:35px;">DIABETE</span> en  "Quelques Questions"</h3>
                     </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
-Age = st.number_input("Enter your age:",step=10.0)
+Age = st.number_input("Entrez votre age:",step=10.0)
 
 # Define variables to store the selected options
 selected_options = []
