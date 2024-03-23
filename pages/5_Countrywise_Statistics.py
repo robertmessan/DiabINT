@@ -6,7 +6,7 @@ import streamlit as st
 import plotly.express as px
 
 # Load the diabetes dataset
-df = pd.read_csv("./data/countrywise_data.csv")
+df = pd.read_csv("data/countrywise_data.csv")
 
 # Create a Streamlit app
 # st.title("Diabetes Map Chart of the world")
