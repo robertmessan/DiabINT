@@ -8,8 +8,8 @@ classifier = pickle.load(pickle_in)
 # Define the questions and answer options
 questions = ["Gender", "Polyuria (Excessive passage of Urine)", "Polydipsia (Excessive thirst)", "Sudden weight loss", "Weakness", "Polyphagia (Feeling of extreme, insatiable hunger)", "Visual blurring", "Itching", "Irritability", "Delayed healing", "Partial paresis (Weakening of a muscle)", "Muscle stiffness", "Alopecia (Baldness)", "Obesity (Excessive amount of body fat)"]
 options = {
-    "Genre": ["Masculin", "Feminin"],
-    "Polyurie (émission excessive d'urine)": ["Oui", "Non"],
+    "Gender": ["Male", "Female"],
+    "Polyuria (Excessive passage of Urine)": ["Yes", "No"],
     "Polydipsia (Excessive thirst)": ["Yes", "No"],
     "Sudden weight loss": ["Yes", "No"],
     "Weakness": ["Yes", "No"],
@@ -31,7 +31,7 @@ html_temp = """
                     <h3 style="color:#000;text-align:center;">Faire mon test du <span style="color:red;font-size:35px;">DIABETE</span> en  "Quelques Questions"</h3>
                     </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
-Age = st.number_input("Entrez votre age:",step=10.0)
+Age = st.number_input("Enter your age:",step=10.0)
 
 # Define variables to store the selected options
 selected_options = []
@@ -67,7 +67,7 @@ if st.button("Submit"):
         st.markdown(html_temp,unsafe_allow_html=True)
 
       # Display the probability of being positive
-    st.header(f"Probability of being positive:  **:red[{proba:.2f}%]**")
+    st.header(f"La probabilité d'être négatif au test:  **:red[100-{proba:.2f}%]**")
     
 
 #     html_code ="""
