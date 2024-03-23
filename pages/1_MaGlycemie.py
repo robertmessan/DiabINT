@@ -28,7 +28,7 @@ options = {
 # st.title("Predict DIABETES with some simple questions")
 html_temp = """
                     <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
-                    <h3 style="color:#000;text-align:center;">Faire mon test du <span style="color:red;font-size:35px;">DIABETE</span> en  "Quelques Questions"</h3>
+                    <h3 style="color:#000;text-align:center;">Make my TEST for <span style="color:red;font-size:35px;">DIABETES</span> in  "simple Questions"</h3>
                     </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 Age = st.number_input("Enter your age:",step=10.0)
@@ -62,12 +62,12 @@ if st.button("Submit"):
     else:
         html_temp = """
                     <div style="background-color:#ad0f03;padding:1.5px;border-radius:20px;">
-                    <h4 style="color:white;text-align:center;">We are really sorry to say, but it seems like you are Diabetic. ☹️</h4>
+                    <h4 style="color:white;text-align:center;">We are really sorry to say, but it seems like you are Diabetic. ☹️ </h4>
                     </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
 
       # Display the probability of being positive
-    st.header(f"La probabilité d'être négatif au test:  **:red[{100-proba:.2f}%]**")
+    st.header(f"The probability to be negative for the test:  **:red[{100-proba:.2f}%]**")
     
 
 #     html_code ="""
@@ -177,8 +177,10 @@ def predict_diabetes(row):
     
 html_temp = """
                     <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
-                    <h2 style="color:#000;text-align:center;">Form 2</h2>
-                    </div><br>"""
+                    <h2 style="color:#000;text-align:center;">Let fill the second form to be sure about your results</h2>
+                    </div><br>""" <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
+                    <h3 style="color:#000;text-align:center;">Let fill the second FORM <span style="color:green;font-size:35px;">to be SURE about </span>  "your results"</h3>
+                    </div><br>
 st.markdown(html_temp,unsafe_allow_html=True)  
     
 age = st.number_input("Enter age:",step=5.)
@@ -202,7 +204,7 @@ data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
 if submit:
     prediction = predict_diabetes(data.iloc[0])
     #if prediction=="High Risk":
-    st.header(f"Probability of being positive:  **:red[{prediction}]**")
+    st.header(f"Probability to be negative for the test:  **:red[{1-prediction}]**")
 
 
 hide_st_style = """
