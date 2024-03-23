@@ -129,7 +129,8 @@ def Diabetes_Predict():
                     <h4 style="color:white;text-align:center;">{name.upper()} We are really sorry to say, but it seems like you are Diabetic. ☹️</h4>
                     </div><br>"""
             st.markdown(html_temp,unsafe_allow_html=True)
-
+if __name__ == "__main__":
+    Diabetes_Predict()
 
 
 hide_st_style = """
