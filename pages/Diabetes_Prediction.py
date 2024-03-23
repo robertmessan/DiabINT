@@ -1,5 +1,5 @@
 import streamlit as st
-import Login_and_Registration
+import pages.Login_and_Registration
 import pandas as pd
 import numpy as np
 import plotly.express as px
