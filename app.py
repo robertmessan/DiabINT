@@ -5,9 +5,7 @@ import numpy as np
 import datetime as dt
 import altair as alt
 import pickle
-from diabetes.pages import Food_Recommendation
-from diabetes import Diabetes_Prediction
-from diabetes.pages import Countrywise_Statistics
+
 
 @st.cache_data#(allow_output_mutation=True)
 def load(scaler_path, model_path):
@@ -44,23 +42,13 @@ dpf=0.471
 bmi = poids/(taille**2)
 row = [pregnancies, glucose, bloodpressure, skinthickness, insulin, bmi, dpf, age]
 
-if (st.button('Voir les résultats 1')):
+if (st.button('Voir les résultats ')):
     feat_cols = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
 
     sc, model = load('models/scaler.joblib', 'models/model.joblib')
     result = inference(row, sc, model, feat_cols)
     st.write(result)
 
-if st.button("Voir les résultats 2"):
-    pickle_in = open('./diabetes/logisticRegr.pkl', 'rb')
-    classifier = pickle.load(pickle_in)
-    Diabetes_Prediction.Diabetes_Predict()
-
-if st.button("Recommandations de nourriture"):
-    Food_Recommendation.food()
-    
-if st.button("Avoir les stats clée"):
-    Countrywise_Statistics.statistic()
 
 
 if st.button("Visualiser le tableau de bord"):
