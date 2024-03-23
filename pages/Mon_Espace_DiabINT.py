@@ -23,7 +23,7 @@ st.set_page_config(layout="wide")
 def Diabetes_Predict():
     # st.button('LOGOUT')
     # Display user data
-    # st.write(st.session_state["user_data"])
+    st.write(st.session_state["user_data"])
     username=st.session_state["user_data"][0]
     # st.subheader(f"Welcome!!! {username} ")
     html_temp = """
