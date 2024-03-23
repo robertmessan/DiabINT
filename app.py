@@ -1,19 +1,19 @@
 import streamlit as st
-import pickle
+import joblib
 import pandas as pd
 from PIL import Image
 import numpy as np
 import datetime as dt
 import altair as alt
+import pickle
+from diabetes.pages import Food_Recommendation
+from diabetes import Diabetes_Prediction
+from diabetes.pages import Countrywise_Statistics
 
-im1=Image.open("data/diabetes_image.jpg")
-st.set_page_config(page_title="DiabINT_SudParis",page_icon=im1, layout="wide")
 @st.cache_data#(allow_output_mutation=True)
 def load(scaler_path, model_path):
-    with open(scaler_path, "rb") as scaler:
-        sc = pickle.load(scaler)
-    with open(model_path, "rb") as model:
-        model = pickle.load(model)
+    sc = joblib.load(scaler_path)
+    model = joblib.load(model_path)
     return sc , model
 
 def inference(row, scaler, model, feat_cols):
@@ -45,15 +45,23 @@ dpf=0.471
 bmi = poids/(taille**2)
 row = [pregnancies, glucose, bloodpressure, skinthickness, insulin, bmi, dpf, age]
 
-if (st.button('Voir les résultats')):
+if (st.button('Voir les résultats 1')):
     feat_cols = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
 
-    sc, model = load('models/scaler.pkl', 'models/model.pkl')
+    sc, model = load('models/scaler.joblib', 'models/model.joblib')
     result = inference(row, sc, model, feat_cols)
     st.write(result)
 
+if st.button("Voir les résultats 2"):
+    pickle_in = open('./diabetes/logisticRegr.pkl', 'rb')
+    classifier = pickle.load(pickle_in)
+    Diabetes_Prediction.Diabetes_Predict()
 
-#Partie tableau de bord
+if st.button("Recommandations de nourriture"):
+    Food_Recommendation.food()
+    
+if st.button("Avoir les stats clée"):
+    Countrywise_Statistics.statistic()
 
 
 if st.button("Visualiser le tableau de bord"):
@@ -137,3 +145,4 @@ if st.button("Visualiser le tableau de bord"):
     ).interactive()
 
     st.altair_chart(mean_glucose_plot, use_container_width=True)
+
