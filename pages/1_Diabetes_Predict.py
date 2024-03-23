@@ -2,7 +2,7 @@
 import streamlit as st
 import pickle
 
-pickle_in = open('./pages/randomForest.pkl', 'rb')
+pickle_in = open('models/randomForest.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 # Define the questions and answer options
