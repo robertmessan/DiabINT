@@ -10,12 +10,12 @@ from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileT
 
 # Define a function to read the user data from the CSV file
 def read_data():
-    data = pd.read_csv("../data/user_data.csv")
+    data = pd.read_csv("./data/user_data.csv")
     return data
 
 # Define a function to write the user data to the CSV file
 def write_data(data):
-    data.to_csv("../data/user_data.csv", index=False)
+    data.to_csv("./data/user_data.csv", index=False)
 
 # Create a function to simulate a login check
 def simulate_login(username, password):
@@ -31,7 +31,7 @@ def hash_password(password):
     return hex_dig
 
 
-pickle_in = open('./diabetes/logisticRegr.pkl', 'rb')
+pickle_in = open('./pages/logisticRegr.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 
