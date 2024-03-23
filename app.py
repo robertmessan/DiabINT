@@ -144,7 +144,7 @@ website = "https://www.linkedin.com/in/kossi-robert-messan-252954223/"
 hide_st_style = """
     <style>
     #MainMenu {visibility: hidden;}
-    footer {visibility: hidden;}
+    #footer {visibility: hidden;}
     header {visibility: hidden;}
     </style>
 """
@@ -153,3 +153,6 @@ st.markdown(hide_st_style, unsafe_allow_html=True)
 # Copyright en bas de la page
 footer_text = f'<footer>@copyright {author} - <a href="{website}">{website}</a></footer>'
 st.markdown(footer_text, unsafe_allow_html=True)
+
+
+st.markdown("[Retourner sur la page d'accueil](https://github.com/robertmessan)")
