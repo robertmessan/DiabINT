@@ -70,3 +70,19 @@ if st.button('FIND FOOD 🔍'):
 
 
     # Display filtered food
+
+hide_st_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+"""
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+
+
+
+st.markdown("[Retourner sur la page d'accueil](https://github.com/robertmessan)\n\n\n\n")
+st.markdown("\n\n\n\n\n[Kossi Robert MESSAN](https://www.linkedin.com/in/kossi-robert-messan-252954223/)")
+
