@@ -146,4 +146,8 @@ hide_st_style = """
             </style>
             """
 st.markdown(hide_st_style, unsafe_allow_html=True)
+author = "Votre Nom"
+website = "https://www.votre-site.com"
 
+# Affichage du @copyright
+st.write(f"@copyright {author} - [{website}]({website})")
