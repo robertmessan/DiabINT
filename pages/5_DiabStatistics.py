@@ -30,7 +30,7 @@ fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_typ
 # Display the map chart in Streamlit
 st.plotly_chart(fig)
 
-st.markdown("<center><span style='color:yellow'>Diabetes report of all the countries 2000-2045</span></center>", unsafe_allow_html=True)
+st.markdown("<center><span style='color:green'>Diabetes report of all the countries 2000-2045</span></center>", unsafe_allow_html=True)
 
 
 st.markdown(' ')
