@@ -1,16 +1,19 @@
 import streamlit as st
+import pickle
 import pandas as pd
 from PIL import Image
 import numpy as np
 import datetime as dt
 import altair as alt
-import pickle
 
-
+im1=Image.open("data/diabetes_image.jpg")
+st.set_page_config(page_title="DiabINT_SudParis",page_icon=im1, layout="wide")
 @st.cache_data#(allow_output_mutation=True)
 def load(scaler_path, model_path):
-    sc = joblib.load(scaler_path)
-    model = joblib.load(model_path)
+    with open(scaler_path, "rb") as scaler:
+        sc = pickle.load(scaler)
+    with open(model_path, "rb") as model:
+        model = pickle.load(model)
     return sc , model
 
 def inference(row, scaler, model, feat_cols):
@@ -42,13 +45,15 @@ dpf=0.471
 bmi = poids/(taille**2)
 row = [pregnancies, glucose, bloodpressure, skinthickness, insulin, bmi, dpf, age]
 
-if (st.button('Voir les résultats ')):
+if (st.button('Voir les résultats')):
     feat_cols = ['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age']
 
-    sc, model = load('models/scaler.joblib', 'models/model.joblib')
+    sc, model = load('models/scaler.pkl', 'models/model.pkl')
     result = inference(row, sc, model, feat_cols)
     st.write(result)
 
+
+#Partie tableau de bord
 
 
 if st.button("Visualiser le tableau de bord"):
@@ -132,13 +137,4 @@ if st.button("Visualiser le tableau de bord"):
     ).interactive()
 
     st.altair_chart(mean_glucose_plot, use_container_width=True)
-
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
 
