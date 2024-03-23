@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import hashlib
-import pages.Mon_Espace_DiabINT
+import Mon_Espace_DiabINT
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
@@ -15,7 +15,7 @@ def read_data():
 
 # Define a function to write the user data to the CSV file
 def write_data(data):
-    data.to_csv("./data/user_data.csv", index=False)
+    data.to_csv("data/user_data.csv", index=False)
 
 # Create a function to simulate a login check
 def simulate_login(username, password):
