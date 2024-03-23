@@ -202,7 +202,7 @@ data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
 if submit:
     prediction = predict_diabetes(data.iloc[0])
     #if prediction=="High Risk":
-    st.header(f"Probability to be negative for the test:  **:red[{1-prediction}]**")
+    st.header(f"Probability to be negative for the test:  **:red[{100-prediction}%]**")
 
 
 hide_st_style = """
