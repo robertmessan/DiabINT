@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import hashlib
-import pages.MonEspaceDiabINT
+import pages.Mon_Espace_DiabINT
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
@@ -197,4 +197,4 @@ if __name__ == "__main__":
     # Show the diabetes prediction form if user is logged in
     if st.session_state.logged_in:
         # st.subheader("Diabetes Prediction Form")
-        MonEspaceDiabINT.Diabetes_Predict()
+        Mon_Espace_DiabINT.Diabetes_Predict()
