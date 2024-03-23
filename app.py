@@ -138,3 +138,12 @@ if st.button("Visualiser le tableau de bord"):
 
     st.altair_chart(mean_glucose_plot, use_container_width=True)
 
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
