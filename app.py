@@ -141,6 +141,5 @@ if st.button("Visualiser le tableau de bord"):
 author = "Kossi Robert MESSAN"
 website = "https://www.linkedin.com/in/kossi-robert-messan-252954223/"
 
-st.markdown(
-        f'@copyright {author} - [{website}]({website})'
-)
+footer_text = f'@copyright {author} - [{website}]({website})'
+st.markdown(footer_text)
