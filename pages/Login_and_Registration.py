@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import hashlib
-import Diabetes_Prediction
+import pages.Diabetes_Prediction
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
