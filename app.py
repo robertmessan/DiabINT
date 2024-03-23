@@ -138,16 +138,9 @@ if st.button("Visualiser le tableau de bord"):
 
     st.altair_chart(mean_glucose_plot, use_container_width=True)
 
-hide_st_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            header {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_st_style, unsafe_allow_html=True)
-author = "Votre Nom"
-website = "https://www.votre-site.com"
+author = "Kossi Robert MESSAN"
+website = "https://www.linkedin.com/in/kossi-robert-messan-252954223/"
 
-# Affichage du @copyright
-st.write(f"@copyright {author} - [{website}]({website})")
+    st.markdown(
+        f'@copyright {author} - [{website}]({website})'
+    )
