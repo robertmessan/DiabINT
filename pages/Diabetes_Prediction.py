@@ -13,7 +13,7 @@ from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileT
 
 
 
-pickle_in = open('./diabetes/logisticRegr.pkl', 'rb')
+pickle_in = open('./data/logisticRegr.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 # st.set_page_config(page_title = "Diabetes Prediction")
