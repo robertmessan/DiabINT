@@ -26,7 +26,9 @@ st.markdown('Sometimes people call diabetes “a touch of sugar” or “borderl
 
 image = Image.open('./images/diabetes.png')
 
-st.image(image, caption='India is often referred to as the "Diabetes Capital of the World", as it accounts for 17%percent of the total number of diabetes patients in the world. There are currently close to 80 million people with diabetes in India and this number is expected to increase to 135 million by 2045.')
+st.image(image, caption='In France, more than 4 million people were living with diabetes in 2021. The prevalence of this chronic disease is rising steadily, from 5.6% in 2015 to 6.07% in 20211. This sharp rise in the number of cases of diabetes means that we are facing a veritable epidemic. Today, the management of diabetes represents a real socio-economic and public health challenge. At the heart of these concerns are our lifestyles, but not only ...
+
+Translated with DeepL.com (free version)')
 
 st.title("What are the different types of diabetes?")
 st.markdown(' ')
