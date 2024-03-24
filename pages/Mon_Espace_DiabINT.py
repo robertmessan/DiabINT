@@ -23,16 +23,7 @@ st.set_page_config(layout="wide")
 
 
 def Diabetes_Predict():
-    if st.sidebar.button('LOGOUT🔁'):
-        # Clear user data from session state
-        # st.session_state.pop("user_data", None)
-        # Login_and_Registration.loginAndRegister()
-        Login_and_Registration.loginAndRegister()
-        st.session_state.logged_in = False
-        st.session_state['user_data'] = None
-        
-        st.success('Logged out successfully.')
-        return False
+
     # st.button('LOGOUT')
     # Display user data
     st.write(st.session_state["user_data"])
@@ -54,6 +45,16 @@ def Diabetes_Predict():
     # st.sidebar.header(f'Welcome!!! {username}')
     # st.sidebar.markdown(msg,unsafe_allow_html=True)
     
+    if st.sidebar.button('LOGOUT🔁'):
+        # Clear user data from session state
+        # st.session_state.pop("user_data", None)
+        # Login_and_Registration.loginAndRegister()
+        Login_and_Registration.loginAndRegister()
+        st.session_state.logged_in = False
+        st.session_state['user_data'] = None
+        
+        st.success('Logged out successfully.')
+        return False    
 
         
 
