@@ -4,8 +4,9 @@ import hashlib
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
+import pages
 
-import pages.Mon_Espace_DiabINT
+from pages import Mon_Espace_DiabINT
 
 
 
