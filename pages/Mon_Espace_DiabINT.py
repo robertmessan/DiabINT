@@ -1,5 +1,5 @@
 import streamlit as st
-import .Login_and_Registration
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -10,6 +10,7 @@ import seaborn as sns
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
+import pages.Login_and_Registration
 
 
 
