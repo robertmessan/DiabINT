@@ -26,9 +26,7 @@ st.markdown('Sometimes people call diabetes “a touch of sugar” or “borderl
 
 image = Image.open('./images/diabetes.png')
 
-st.image(image, caption='In France, more than 4 million people were living with diabetes in 2021. The prevalence of this chronic disease is rising steadily, from 5.6% in 2015 to 6.07% in 20211. This sharp rise in the number of cases of diabetes means that we are facing a veritable epidemic. Today, the management of diabetes represents a real socio-economic and public health challenge. At the heart of these concerns are our lifestyles, but not only ...
-
-Translated with DeepL.com (free version)')
+st.image(image, caption='In France, more than 4 million people were living with diabetes in 2021. The prevalence of this chronic disease is rising steadily, from 5.6% in 2015 to 6.07% in 20211. This sharp rise in the number of cases of diabetes means that we are facing a veritable epidemic. Today, the management of diabetes represents a real socio-economic and public health challenge. At the heart of these concerns are our lifestyles, but not only ...')
 
 st.title("What are the different types of diabetes?")
 st.markdown(' ')
