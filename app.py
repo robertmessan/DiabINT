@@ -5,6 +5,7 @@ from PIL import Image
 import numpy as np
 import datetime as dt
 import altair as alt
+import time
 
 im1=Image.open("data/diabetes_image.jpg")
 st.set_page_config(page_title="DiabINT_SudParis",page_icon=im1, layout="wide")
@@ -25,6 +26,11 @@ def inference(row, scaler, model, feat_cols):
     else: return "Il y a de très forte chance qu'il y ait un fort déséquilibre entre votre taux d'insuline et votre taux de sucre!"
 
 st.title('Voyager avec DiabINT')
+    phrase = "Suivez de plus près votre équilibre taux de glucose/taux d\'insuline pour voyager en toute tranquilité. Déterminer en tant réel l\'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!"
+    phrase_affichee = st.empty()
+    for i in range(len(phrase)):
+        phrase_affichee.markdown('<h2 style="color: green;">phrase[:i+1]</h2>', unsafe_allow_html=True)
+        time.sleep(0.02)
 st.markdown('<h2 style="color: green;">Suivez de plus près votre équilibre taux de glucose/taux d\'insuline pour voyager en toute tranquilité. Déterminer en tant réel l\'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!</h2>', unsafe_allow_html=True)
 
 image = Image.open('data/diabetes_image.jpg')
