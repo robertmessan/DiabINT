@@ -25,7 +25,7 @@ def inference(row, scaler, model, feat_cols):
     else: return "Il y a de très forte chance qu'il y ait un fort déséquilibre entre votre taux d'insuline et votre taux de sucre!"
 
 st.title('Voyager avec DiabINT')
-st.write("Suivez au plus près votre équilibre taux de glucose/taux d'insuline pour voyager en toute tranquilité. Déterminer en tant réel l'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!")
+st.header("Suivez au plus près votre équilibre taux de glucose/taux d'insuline pour voyager en toute tranquilité. Déterminer en tant réel l'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!")
 image = Image.open('data/diabetes_image.jpg')
 st.image(image, use_column_width=True)
 st.write("remplissez s'il vous plaît vos dernières informations pour avoir une vue précise de votre équilibre hormonal! ")
