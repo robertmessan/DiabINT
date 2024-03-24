@@ -26,10 +26,10 @@ def inference(row, scaler, model, feat_cols):
     else: return "Il y a de très forte chance qu'il y ait un fort déséquilibre entre votre taux d'insuline et votre taux de sucre!"
 
 st.title('Voyager avec DiabINT')
-phrase = st.markdown('<h2 style="color: green;">Suivez de plus près votre équilibre taux de glucose/taux d\'insuline pour voyager en toute tranquilité. Déterminer en tant réel l\'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!</h2>', unsafe_allow_html=True)
+phrase = "Suivez de plus près votre équilibre taux de glucose/taux d\'insuline pour voyager en toute tranquilité. Déterminer en tant réel l\'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!"
 phrase_affichee = st.empty()
 for i in range(len(phrase)):
-    phrase_affichee.write(phrase[:i+1])
+    phrase_affichee.subheader(phrase[:i+1])
     time.sleep(0.02)
 st.markdown('<h2 style="color: green;">Suivez de plus près votre équilibre taux de glucose/taux d\'insuline pour voyager en toute tranquilité. Déterminer en tant réel l\'influence de votre alimentation sur cette équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!</h2>', unsafe_allow_html=True)
 
@@ -37,17 +37,17 @@ image = Image.open('data/diabetes_image.jpg')
 st.image(image, use_column_width=True)
 st.write("remplissez s'il vous plaît vos dernières informations pour avoir une vue précise de votre équilibre hormonal! ")
 
-age =           st.sidebar.number_input("Votre âge", 1, 150, 25, 1)
+age =           st.number_input("Votre âge", 1, 150, 25, 1)
 pregnancies=0
-sex = st.sidebar.radio("Sexe", ("Masculin", "Féminin"))
+sex = st.radio("Sexe", ("Masculin", "Féminin"))
 if sex == "Féminin":
-    pregnancies = st.sidebar.number_input("Nombre de grossesses(passées)", 0, 20, 0, 1)
-glucose =       st.sidebar.slider("Taux de glucose", 0, 200, 25, 1)
-skinthickness = st.sidebar.slider("Epaisseur du pli cutané", 0, 99, 20, 1)
-bloodpressure = st.sidebar.slider('Pression artérielle', 0, 122, 69, 1)
-insulin =       st.sidebar.slider("Insuline", 0, 846, 79, 1)
-poids=          st.sidebar.slider("Votre poids(en Kg)", 15.0, 450.0, 65.0, 1.0)
-taille=          st.sidebar.slider("Votre taille(en m)", 1.0, 3.0,1.35, 0.01)
+    pregnancies = st.number_input("Nombre de grossesses(passées)", 0, 20, 0, 1)
+glucose =       st.slider("Taux de glucose", 0, 200, 25, 1)
+skinthickness = st.slider("Epaisseur du pli cutané", 0, 99, 20, 1)
+bloodpressure = st.slider('Pression artérielle', 0, 122, 69, 1)
+insulin =       st.slider("Insuline", 0, 846, 79, 1)
+poids=          st.slider("Votre poids(en Kg)", 15.0, 450.0, 65.0, 1.0)
+taille=          st.slider("Votre taille(en m)", 1.0, 3.0,1.35, 0.01)
 dpf=0.471
 bmi = poids/(taille**2)
 row = [pregnancies, glucose, bloodpressure, skinthickness, insulin, bmi, dpf, age]
@@ -86,10 +86,10 @@ if st.button("Visualiser le tableau de bord"):
     df = load_data()
 
     # Sidebar
-    st.sidebar.title("Réglages")
-    device_picker = st.sidebar.radio("Sélecteur d'appareil", ['FreeStyle Libre', 'FreeStyle LibreLink'])
-    start_date = st.sidebar.date_input("Date de début", dt.date(2019, 8, 12))
-    end_date = st.sidebar.date_input("Date de Fin", dt.date(2024, 4, 10), min_value=start_date, max_value=dt.date(2024, 4, 10))
+    st.title("Réglages")
+    device_picker = st.radio("Sélecteur d'appareil", ['FreeStyle Libre', 'FreeStyle LibreLink'])
+    start_date = st.date_input("Date de début", dt.date(2019, 8, 12))
+    end_date = st.date_input("Date de Fin", dt.date(2024, 4, 10), min_value=start_date, max_value=dt.date(2024, 4, 10))
 
     # Filter data
     filtered_df = df[(df['Device'] == device_picker) & (df['Date'] >= start_date) & (df['Date'] <= end_date)]
