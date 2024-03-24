@@ -1,10 +1,11 @@
 import streamlit as st
 import pandas as pd
 import hashlib
-import .Mon_Espace_DiabINT
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
+
+import pages.Mon_Espace_DiabINT
 
 
 
