@@ -52,8 +52,7 @@ st.markdown('Less common types include monogenic diabetes, which is an inherited
 st.markdown(' ')
 
 st.title('How common is Diabetes?')
-st.markdown('The rate of diabetes diagnoses is increasing around the world, including in India. India has the second-highest total population in the world at more than 1.3 billion people. The International Diabetes Federation estimated that **:red[72.9 million adults]** in India were living with diabetes in 2017. A 2017 study also found that diabetes prevalenceTrusted Source was higher in urban areas.')
-
+st.markdown('In France, more than **:red[4 million people were living with diabetes in 2021]**. The prevalence of this chronic disease is rising steadily, from 5.6% in 2015 to 6.07% in 2021. This sharp rise in the number of cases of diabetes means that we are facing a veritable epidemic. Today, the management of diabetes represents a real socio-economic and public health challenge.')
 
 
 import altair as alt
@@ -103,8 +102,8 @@ height=400
 
 # Show the chart in Streamlit
 st.altair_chart(chart, use_container_width=True)
-# st.markdown('<center>**:red[Diabetes report of India 2000-2045]**</center>', unsafe_allow_html=True)
-st.markdown("<center><span style='color:green'>Diabetes report of India 2000-2045</span></center>", unsafe_allow_html=True)
+# st.markdown('<center>**:red[Diabetes report of France 2000-2045]**</center>', unsafe_allow_html=True)
+st.markdown("<center><span style='color:green'>Diabetes report of France 2000-2045</span></center>", unsafe_allow_html=True)
 
 st.markdown(' ')
 st.title('Who is more likely to develop type 2 diabetes?')
