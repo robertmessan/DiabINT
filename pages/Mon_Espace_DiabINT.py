@@ -26,8 +26,7 @@ def Diabetes_Predict():
     # st.button('LOGOUT')
     # Display user data
     st.write(st.session_state["user_data"])
-    if st.session_state["user_data"] is not None:
-        username=st.session_state["user_data"][0]
+    username=st.session_state["user_data"][0]
     # st.subheader(f"Welcome!!! {username} ")
     html_temp = """
     <div style="background-color:tomato;padding:1.5px">
@@ -57,7 +56,7 @@ def Diabetes_Predict():
         return False
         
 
-        # st.stop()
+        st.stop()
     
     st.header('Diabetes Prediction System')
     name = st.text_input("Enter your Name:",value=username)
