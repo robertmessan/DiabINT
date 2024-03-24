@@ -10,7 +10,8 @@ import seaborn as sns
 import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
-import pages.Login_and_Registration
+import pages
+from pages import Login_and_Registration
 
 
 
