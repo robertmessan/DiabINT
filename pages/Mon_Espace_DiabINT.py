@@ -133,9 +133,10 @@ def Diabetes_Predict():
                         <h4 style="color:white;text-align:center;">{name.upper()} We are really sorry to say, but it seems like you are Diabetic. ☹️</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
-except Exception as e:
-    # Code à exécuter en cas d'autres exceptions
-    st.error("Une erreur s'est produite, veuillez vous identifier dans la section logging :{e}")
+    except Exception as e:
+        st.error("Une erreur s'est produite, veuillez vous identifier dans la section logging :{e}")
+
+    
 if __name__ == "__main__":
     Diabetes_Predict()
 
