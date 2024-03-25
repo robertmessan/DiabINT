@@ -63,7 +63,7 @@ def Diabetes_Predict():
         # html = f"""
         #         <html>
         #             <body>
-        #                 <h1>Diabetic Prediction Form</h1>
+        #                 <h1>Diabetic Monitoring Form</h1>
         #                 <p><strong>Name:</strong> {name}</p>
         #                 <p><strong>Age:</strong> {age}</p>
         #                 <p><strong>Pregnancy:</strong> {glucose}</p>
@@ -82,7 +82,7 @@ def Diabetes_Predict():
         # message = Mail(
         #     from_email="19c16@sdmit.in",
         #     to_emails="cturuby@gmail.com",
-        #     subject="Diabetic Prediction Form",
+        #     subject="Diabetic Monitoring Form",
         #     html_content="Please find attached the PDF file with your form data.")
         # with open("form.pdf", "rb") as f:
         #     data = f.read()
@@ -198,5 +198,5 @@ if __name__ == "__main__":
 
     # Show the diabetes prediction form if user is logged in
     if st.session_state.logged_in:
-        # st.subheader("Diabetes Prediction Form")
+        # st.subheader("Diabetes Monitoring Form")
         Mon_Espace_DiabINT.Diabetes_Predict()
