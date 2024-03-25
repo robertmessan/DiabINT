@@ -42,7 +42,7 @@ classifier = pickle.load(pickle_in)
 def Diabetes_Predict():
     html_temp = """
     <div style="background-color:tomato;padding:1.5px">
-    <h1 style="color:white;text-align:center;">Diabetes Prediction System 💉</h1>
+    <h1 style="color:white;text-align:center;">diabetes monitoring system 💉</h1>
     </div><br>"""
     st.markdown(html_temp,unsafe_allow_html=True)
    
@@ -107,7 +107,7 @@ def Diabetes_Predict():
 
         #Printing the result
         if prediction == 0:
-            st.success(name.upper()+'!!! You are not diabetic 😃')
+            st.success(name.upper()+'!!! You're healthy! Your glucose/insulin balance is good😃')
         else:
             st.warning(name.upper()+'... we are really sorry to say, but it seems like you are Diabetic. ☹️')
   
