@@ -130,7 +130,7 @@ def Diabetes_Predict():
                 # st.warning(name.upper()+'... we are really sorry to say, but it seems like you are Diabetic. ☹️')
                 html_temp = f"""
                         <div style="background-color:#ad0f03;padding:1.5px;border-radius:20px;">
-                        <h4 style="color:white;text-align:center;">{name.upper()} Beware, it appears that your glucose/insulin ratio is unbalanced. Follow the advice on our page! ☹️</h4>
+                        <h4 style="color:white;text-align:center;">{name.upper()} Beware, it appears that your glucose/insulin ratio is unbalanced. Read the advice on our page! ☹️</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
     except Exception as e:
