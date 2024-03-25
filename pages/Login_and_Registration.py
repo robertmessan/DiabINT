@@ -47,7 +47,7 @@ def Diabetes_Predict():
     st.markdown(html_temp,unsafe_allow_html=True)
    
 
-    st.sidebar.header('Diabetes Prediction')
+    st.sidebar.header('Diabetes Monitoring')
     name = st.text_input("Enter your Name:",key=1)
     pregnancy = st.number_input("No. of times pregnant:",step=1.,key=2)
     glucose = st.number_input("Plasma Glucose Concentration :",step=10.,key=3)
