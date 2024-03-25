@@ -109,7 +109,7 @@ def Diabetes_Predict():
         if prediction == 0:
             st.success(name.upper()+'!!! You're healthy! Your glucose/insulin balance is good😃')
         else:
-            st.warning(name.upper()+'... we are really sorry to say, but it seems like you are Diabetic. ☹️')
+            st.warning(name.upper()+'... Beware, it appears that your glucose/insulin ratio is unbalanced. Follow the advice on our page! ☹️')
   
 
 
