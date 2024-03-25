@@ -31,7 +31,7 @@ def Diabetes_Predict():
         # st.subheader(f"Welcome!!! {username} ")
         html_temp = """
         <div style="background-color:tomato;padding:1.5px">
-        <h1 style="color:white;text-align:center;">Diabetes Prediction System 💉</h1>
+        <h1 style="color:white;text-align:center;">Diabetes monitoring System 💉</h1>
         </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
      
