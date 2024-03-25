@@ -42,7 +42,7 @@ classifier = pickle.load(pickle_in)
 def Diabetes_Predict():
     html_temp = """
     <div style="background-color:tomato;padding:1.5px">
-    <h1 style="color:white;text-align:center;">diabetes Monitoring system 💉</h1>
+    <h1 style="color:white;text-align:center;">Diabetes Monitoring system 💉</h1>
     </div><br>"""
     st.markdown(html_temp,unsafe_allow_html=True)
    
