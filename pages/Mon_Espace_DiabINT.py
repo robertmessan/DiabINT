@@ -120,7 +120,7 @@ def Diabetes_Predict():
     
             #Printing the result
             if prediction == 0:
-                # st.success(name.upper()+'!!! You are not diabetic 😃')
+                # st.success(name.upper()+'!!! You're healthy! Your glucose/insulin balance is good😃')
                 html_temp = f"""
                         <div style="background-color:#748c08;padding:1.5px;border-radius:20px;">
                         <h4 style="color:white;text-align:center;">{name.upper()} You are not diabetic 😃</h4>
@@ -130,7 +130,7 @@ def Diabetes_Predict():
                 # st.warning(name.upper()+'... we are really sorry to say, but it seems like you are Diabetic. ☹️')
                 html_temp = f"""
                         <div style="background-color:#ad0f03;padding:1.5px;border-radius:20px;">
-                        <h4 style="color:white;text-align:center;">{name.upper()} We are really sorry to say, but it seems like you are Diabetic. ☹️</h4>
+                        <h4 style="color:white;text-align:center;">{name.upper()} Beware, it appears that your glucose/insulin ratio is unbalanced. Follow the advice on our page! ☹️</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
     except Exception as e:
