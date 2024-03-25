@@ -123,7 +123,7 @@ def Diabetes_Predict():
                 # st.success(name.upper()+'!!! You're healthy! Your glucose/insulin balance is good😃')
                 html_temp = f"""
                         <div style="background-color:#748c08;padding:1.5px;border-radius:20px;">
-                        <h4 style="color:white;text-align:center;">{name.upper()} You are not diabetic 😃</h4>
+                        <h4 style="color:white;text-align:center;">{name.upper()} You're healthy! Your glucose/insulin balance is good 😃</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
             else:
