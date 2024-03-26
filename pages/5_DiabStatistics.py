@@ -61,11 +61,6 @@ df = pd.read_csv("data/countrywise_data.csv")
 
 # Create a Streamlit app
 # st.title("Diabetes Map Chart of the world")
-html_temp = """
-<div style="background-color:#440270;padding:1.5px">
-<h1 style="color:white;text-align:center;">Diabetes Map chart of the world🌎 </h1>
-</div><br>"""
-st.markdown(html_temp,unsafe_allow_html=True)
 
 st.subheader('Diabetes estimates (20-79 y)')
 
