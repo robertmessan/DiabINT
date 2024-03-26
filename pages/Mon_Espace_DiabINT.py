@@ -134,7 +134,7 @@ def Diabetes_Predict():
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
     except Exception as e:
-        st.error("Une erreur s'est produite, veuillez vous identifier dans la section logging :{e}")
+        st.error("Une erreur s'est produite, veuillez vous identifier dans la section logging pour avoir accès à votre espace :",e)
 
     
 if __name__ == "__main__":
