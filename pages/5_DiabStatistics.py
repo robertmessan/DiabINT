@@ -19,11 +19,15 @@ st.markdown("<center><span style='color:green'>Diabetes report of all the countr
 
 st.subheader('Diabetes specialists Map chart of the world🌎')
 data1=pd.read_csv("data/dataR.csv")
+professions_diabete = ['Endocrinologue-diabétologue', 'Médecin spécialiste en médecine interne', 'Cardiologue',
+                       'Gastro-entérologue et hépatologue', 'Ophtalmologiste', 'Néphrologue', 'Neurologue',
+                       'Pédiatre', 'Chirurgien-dentiste spécialiste en médecine bucco-dentaire',
+                       'Dermatologue et vénérologue','Médecin généraliste']
 df_selected = data1
 
 # Créer une boîte de sélection pour choisir une profession
 
-selected_profession = st.selectbox("Choisissez une profession", df_selected.columns)
+selected_profession = st.selectbox("Choisissez une profession",professions_diabete )
 
 # Extraire les coordonnées de latitude et longitude à partir de la variable 'Coordonnées'
 df_selected[['Latitude', 'Longitude']] = df_selected['Coordonnées'].str.extract(r'(\d+\.\d+),\s*(-?\d+\.\d+)', expand=True)
