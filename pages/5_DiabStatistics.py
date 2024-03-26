@@ -23,7 +23,7 @@ df_selected = data1
 
 # Créer une boîte de sélection pour choisir une profession
 
-selected_profession = st.selectbox("Choisissez une profession", professions_diabete)
+selected_profession = st.selectbox("Choisissez une profession", df_selected.columns)
 
 # Extraire les coordonnées de latitude et longitude à partir de la variable 'Coordonnées'
 df_selected[['Latitude', 'Longitude']] = df_selected['Coordonnées'].str.extract(r'(\d+\.\d+),\s*(-?\d+\.\d+)', expand=True)
