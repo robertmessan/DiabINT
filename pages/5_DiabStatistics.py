@@ -43,7 +43,7 @@ fig = px.scatter_mapbox(df_selected, lat='Latitude', lon='Longitude', hover_name
                         hover_data=['Nombre de Professionnels', 'Nom du professionnel', 'Profession', 'Adresse', 'Commune'],
                         color='Nombre de Professionnels', size='Nombre de Professionnels',
                         color_continuous_scale='Viridis',
-                        zoom=5, height=600)
+                        zoom=5, width=800,height=600)
 
 fig.update_layout(mapbox_style="open-street-map")
 fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_type="equirectangular"))
