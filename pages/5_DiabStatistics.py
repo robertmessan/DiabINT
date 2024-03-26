@@ -14,7 +14,6 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 
-st.markdown("<center><span style='color:green'>Diabetes report of all the countries 2000-2045</span></center>", unsafe_allow_html=True)
 
 
 st.subheader('Diabetes specialists Map chart of the world🌎')
@@ -50,6 +49,7 @@ fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_typ
 
 # Afficher la carte
 st.plotly_chart(fig)
+st.markdown("<center><span style='color:green'>Diabetes specialists statistics</span></center>", unsafe_allow_html=True)
 
 st.markdown(' ')
 st.markdown('Take this information into consideration before your travel. You can search for statistics related to diabetes specialists of your destination!')
