@@ -5,6 +5,53 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
+
+html_temp = """
+<div style="background-color:#440270;padding:1.5px">
+<h1 style="color:white;text-align:center;">Diabetes specialists Map chart of the world🌎 </h1>
+</div><br>"""
+st.markdown(html_temp,unsafe_allow_html=True)
+
+
+
+st.markdown("<center><span style='color:green'>Diabetes report of all the countries 2000-2045</span></center>", unsafe_allow_html=True)
+
+
+st.subheader('Diabetes specialists Map chart of the world🌎')
+data1=pd.read_csv("data/dataR.csv")
+df_selected = data1[data1['Profession'].isin(professions_diabete)]
+
+# Créer une boîte de sélection pour choisir une profession
+
+selected_profession = st.selectbox("Choisissez une profession", professions_diabete)
+
+# Extraire les coordonnées de latitude et longitude à partir de la variable 'Coordonnées'
+df_selected[['Latitude', 'Longitude']] = df_selected['Coordonnées'].str.extract(r'(\d+\.\d+),\s*(-?\d+\.\d+)', expand=True)
+
+# Grouper les données par région pour obtenir le nombre de professionnels par région
+df_grouped = df_selected.groupby('Nom Officiel Région').size().reset_index(name='Nombre de Professionnels')
+
+# Fusionner les données groupées avec le DataFrame principal pour obtenir le nombre de professionnels par région
+df_selected = df_selected.merge(df_grouped, on='Nom Officiel Région')
+
+# Afficher les professionnels sur la carte avec le nombre de professionnels par région
+fig = px.scatter_mapbox(df_selected, lat='Latitude', lon='Longitude', hover_name='Nom Officiel Région',
+                        hover_data=['Nombre de Professionnels', 'Nom du professionnel', 'Profession', 'Adresse', 'Commune'],
+                        color='Nombre de Professionnels', size='Nombre de Professionnels',
+                        color_continuous_scale='Viridis',
+                        zoom=5, height=600)
+
+fig.update_layout(mapbox_style="open-street-map")
+fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_type="equirectangular"))
+
+# Afficher la carte
+st.plotly_chart(fig)
+
+st.markdown(' ')
+st.markdown('Take this information into consideration before your travel. You can search for statistics related to diabetes specialists of your destination!')
+
+
+
 # Load the diabetes dataset
 df = pd.read_csv("data/countrywise_data.csv")
 
