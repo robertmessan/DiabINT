@@ -30,7 +30,7 @@ df_selected = data1
 selected_profession = st.selectbox("Choisissez une profession",professions_diabete )
 
 # Extraire les coordonnées de latitude et longitude à partir de la variable 'Coordonnées'
-df_selected[['Latitude', 'Longitude']] = df_selected['Coordonnées'].str.extract(r'(\d+\.\d+),\s*(-?\d+\.\d+)', expand=True)
+df_selected[['Latitude', 'Longitude']] = df_selected['Coordonnées'].apply(lambda x: pd.Series(x.split(','))).astype(float)
 
 # Grouper les données par région pour obtenir le nombre de professionnels par région
 df_grouped = df_selected.groupby('Nom Officiel Région').size().reset_index(name='Nombre de Professionnels')
