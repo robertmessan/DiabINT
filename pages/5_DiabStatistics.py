@@ -19,7 +19,7 @@ st.markdown("<center><span style='color:green'>Diabetes report of all the countr
 
 st.subheader('Diabetes specialists Map chart of the world🌎')
 data1=pd.read_csv("data/dataR.csv")
-df_selected = data1[data1['Profession'].isin(professions_diabete)]
+df_selected = data1
 
 # Créer une boîte de sélection pour choisir une profession
 
