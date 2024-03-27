@@ -135,7 +135,7 @@ def Diabetes_Predict():
                 st.markdown(html_temp,unsafe_allow_html=True)
     except Exception as e:
         Login_and_Registration.loginAndRegister()
-        st.write("Rafraîchissez la page pour avoir accès à votre espace après le loggin")
+        st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
 
     
 if __name__ == "__main__":
