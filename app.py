@@ -31,23 +31,23 @@ image = Image.open('data/diabetes_image.jpg')
 st.image(image, use_column_width=True)
 
 html_temp = """
-<div style="background-color:#748c08;padding:1.5px">
+<div style="background-color:#800080;padding:1.5px">
 <h1 style="color:white;text-align:center;">m'informer sur le diabète 📃</h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 html_temp1 = """
-<div style="background-color:#748c08;padding:1.5px">
+<div style="background-color:#800080;padding:1.5px">
 <h1 style="color:white;text-align:center;">Trouver les bonnes statistiques 📊</h1>
 </div><br>"""
 st.markdown(html_temp1,unsafe_allow_html=True)
 html_temp2 = """
-<div style="background-color:#748c08;padding:1.5px">
+<div style="background-color:#800080;padding:1.5px">
 <h1 style="color:white;text-align:center;">Faire des exercices pour régulariser mon taux de glycémie 🏃🏻‍♂️</h1>
 </div><br>"""
 st.markdown(html_temp2,unsafe_allow_html=True)
 
 html_temp3 = """
-<div style="background-color:#748c08;padding:1.5px">
+<div style="background-color:##800080;padding:1.5px">
 <h1 style="color:white;text-align:center;">Mon espace personnel 🔒</h1>
 </div><br>"""
 st.markdown(html_temp3,unsafe_allow_html=True)
