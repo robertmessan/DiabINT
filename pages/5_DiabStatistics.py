@@ -17,11 +17,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 st.subheader('Diabetes specialists Map chart of the world🌎')
-@st.cache_data(persist=True)
-def load_data():
-  data=pd.read_csv("data/dataR.csv")
-  return data
-data1=load_data()
+data1=pd.read_csv("data/dataR.csv")
 professions_diabete = ['Endocrinologue-diabétologue', 'Médecin spécialiste en médecine interne', 'Cardiologue',
                        'Gastro-entérologue et hépatologue', 'Ophtalmologiste', 'Néphrologue', 'Neurologue',
                        'Pédiatre', 'Chirurgien-dentiste spécialiste en médecine bucco-dentaire',
