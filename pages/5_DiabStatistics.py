@@ -17,7 +17,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 st.subheader('Diabetes specialists Map chart of the world🌎')
-@st.cache-data(persist=True)
+@st.cache_data(persist=True)
 def load_data():
   data=pd.read_csv("data/dataR.csv")
   return data
