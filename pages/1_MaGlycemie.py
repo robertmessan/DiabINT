@@ -190,7 +190,7 @@ gender_map = {"Masculin": 0, "Feminin": 1}
 # Create a selection menu for gender and convert to binary
 gender = st.selectbox("Sélectionnez le sexe", list(gender_map.keys()))
 gender_binary = gender_map[gender]
-fh = {"No": 0, "Yes": 1}
+fh = {"Non": 0, "Oui": 1}
 family_history = st.selectbox("Avez-vous des membres de votre famille ayant le diabète?", list(fh.keys()))
 family_history_binary= fh[family_history]
 physical_activity = st.number_input("Entrez votre niveau d'activité physique (en minuite par semaine): ",step=10.)
@@ -204,8 +204,10 @@ data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
 
 if submit:
     prediction = predict_diabetes(data.iloc[0])
-    #if prediction=="Risque Elevé":
-    st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
+    if prediction=="Risque Elevé":
+        st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
+    else:
+        st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
 
 
 hide_st_style = """
