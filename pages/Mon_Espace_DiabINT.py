@@ -155,23 +155,24 @@ def Diabetes_Predict():
             # Intervalles normaux pour chaque variable (à adapter selon les normes médicales)
             
             # Comparaison des valeurs avec les intervalles normaux
-            plt.figure(figsize=(10, 8))
+            plt.figure(figsize=(10, 6))
             for i, (var, (min_val, max_val)) in enumerate(normal_ranges.items()):
-                plt.subplot(3, 3, i+1)
-                user_value = user_data[user_data['Variable'] == var]['Value'].iloc[0]
-                if min_val <= user_value <= max_val:
-                    color = 'green'
-                elif user_value < min_val:
-                    color = 'yellow'
-                else:
-                    color = 'red'
-                plt.bar(['Normal'], [1], color=color)
-                plt.bar([name], [user_value], color='blue')
-                plt.title(var)
-                plt.xticks(rotation=45)
+                if var in user_data['Variable'].values:  # Vérifie si la variable est saisie par l'utilisateur
+                    plt.subplot(2, 3, i+1)
+                    user_value = user_data[user_data['Variable'] == var]['Value'].iloc[0]
+                    if min_val <= user_value <= max_val:
+                        color = 'green'
+                    elif user_value < min_val:
+                        color = 'yellow'
+                    else:
+                        color = 'red'
+                    plt.bar(['Normal'], [1], color=color)
+                    plt.bar([name], [user_value], color='blue')
+                    plt.title(var)
+                    plt.xticks(rotation=45)
             
             plt.tight_layout()
-            plt.show()
+            st.pyplot(plt)
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
