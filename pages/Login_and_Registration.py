@@ -42,22 +42,25 @@ classifier = pickle.load(pickle_in)
 def Diabetes_Predict():
     html_temp = """
     <div style="background-color:tomato;padding:1.5px">
-    <h1 style="color:white;text-align:center;">Diabetes Monitoring system 💉</h1>
+    <h1 style="color:white;text-align:center;">Système de Gestion du Diabète 💉</h1>
     </div><br>"""
     st.markdown(html_temp,unsafe_allow_html=True)
    
 
-    st.sidebar.header('Diabetes Monitoring')
-    name = st.text_input("Enter your Name:",key=1)
-    pregnancy = st.number_input("No. of times pregnant:",step=1.,key=2)
-    glucose = st.number_input("Plasma Glucose Concentration :",step=10.,key=3)
-    bp =  st.number_input("Diastolic blood pressure (mm Hg):",step=10.,key=4)
-    skin = st.number_input("Triceps skin fold thickness (mm):",step=5.,key=5)
-    insulin = st.number_input("2-Hour serum insulin (mu U/ml):",step=10.,key=6)
-    bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):",step=10.,key=7)
-    dpf = st.number_input("Diabetes Pedigree Function:",step=0.1,key=8)
+    st.sidebar.header('Gestion du Diabète')
+    name = st.text_input("Entrez votre nom:",key=1)
+    pregnancy = st.number_input("Nombre de grossesse(s) si vous êtes une femme:",step=1.,key=2)
+    glucose = st.number_input("Concentration du Glucose sanguin :",step=10.,key=3)
+    bp =  st.number_input("Pression artérielle diastolique (mm Hg):",step=10.,key=4)
+    skin = st.number_input("Épaisseur du pli cutané du triceps (mm):",step=5.,key=5)
+    insulin = st.number_input("Insuline sérique sur 2 heures (mu U/ml):",step=10.,key=6)
+    poids= st.number_input("Poids (en kg):",step=10.,key=7)
+    taille= st.number_input("Taille (en m):",step=0.1,key=7)
+    bmi=poids/(taille ** 2)
+    #bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):",step=10.,key=7)
+    dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques ?",step=0.1,key=8)
     age = st.number_input("Age:",step=5.,key=9)
-    submit = st.button('Predict 🔍')
+    submit = st.button('Prédire 🔍')
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
         # html = f"""
@@ -107,9 +110,9 @@ def Diabetes_Predict():
 
         #Printing the result
         if prediction == 0:
-            st.success(name.upper()+'!!! You are healthy! Your glucose/insulin balance is good😃')
+            st.success(name.upper()+'!!! Vous êtes en bon état ! Votre équilibre glucose/insuline est bon😃')
         else:
-            st.warning(name.upper()+'... Beware, it appears that your glucose/insulin ratio is unbalanced. Read the advice on our page! ☹️')
+            st.warning(name.upper()+'... Attention, il semble que votre rapport glucose/insuline soit déséquilibré. Lisez les conseils sur notre page ! ☹️')
   
 
 
@@ -121,11 +124,11 @@ def Diabetes_Predict():
 # Create a Streamlit app
 def loginAndRegister():
     # st.sidebar.subheader(st.session_state)
-    st.title("Login and Register Form")
+    st.title("Formulaire de connexion et d'inscription")
 
     # Create a menu with two options: Login and Register
     menu = ["Login", "Register"]
-    choice = st.sidebar.selectbox("Select an option", menu)
+    choice = st.sidebar.selectbox("Sélectionnez une option", menu)
 
     # Read the user data from the CSV file
     data = read_data()
