@@ -62,7 +62,7 @@ df=filtered_food.drop(columns=hide)
 
 if st.button('TROUVER UN REPAS 🔍'):
     if filtered_food.empty:
-        st.write('Désolé, aucune recommandation alimentaire n'a été trouvée.')
+        st.write('Désolé, aucune recommandation alimentaire n\'a été trouvée.')
     else:
         st.write('Voici quelques recommandations pour vous:')
         # st.write(filtered_food)
