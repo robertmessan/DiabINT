@@ -171,8 +171,8 @@ taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
-    if row['age'] > age_threshold and row['BMI'] > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
-        return "Risque Elevé"
+    if row['age'] > age_threshold and bmi > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
+        return "Risque Eleve"
     else:
         return "Risque Faible"
     
@@ -205,7 +205,7 @@ data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
 
 if submit:
     prediction = predict_diabetes(data.iloc[0])
-    if prediction=="Risque Elevé":
+    if prediction=="Risque Eleve":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
     else:
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
