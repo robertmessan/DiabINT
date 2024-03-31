@@ -196,19 +196,19 @@ family_history = st.selectbox("Avez-vous des membres de votre famille ayant le d
 family_history_binary= fh[family_history]
 physical_activity = st.number_input("Entrez votre niveau d'activité physique (en minuite par semaine): ",step=10.)
 diastolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle (1ère prise):",step=10.)
-systolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle:",step=10.)
+systolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle(2ème prise):",step=10.)
 
 submit = st.button('Prédire 🔍')
 
 data = {'age': age, 'BMI': bmi, 'sex': gender_binary, 'FamilyHistory': family_history_binary, 'physical_activity': physical_activity, 'diastolic_pressure': diastolic_pressure, 'systolic_pressure': systolic_pressure }
 data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
-print(data)
+
 
 if submit:
     prediction = predict_diabetes(data.iloc[0])
     if prediction=="Risque Eleve":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
-    else:
+    elif prediction == "Risque Faible":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
 
 
