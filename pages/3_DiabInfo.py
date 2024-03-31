@@ -32,7 +32,7 @@ st.markdown('Parfois, les gens appellent le diabète "un soupçon de sucre" ou "
 
 image = Image.open('./images/diabetes.png')
 
-st.image(image, caption='En France, plus de 4 millions de personnes vivaient avec le diabète en 2021. La prévalence de cette maladie chronique ne cesse d'augmenter, passant de 5,6 % en 2015 à 6,07 % en 2021. Cette forte augmentation du nombre de cas de diabète nous place face à une véritable épidémie. Aujourd\'hui, la prise en charge du diabète représente un véritable enjeu socio-économique et de santé publique. Au cœur de ces préoccupations, nos modes de vie, mais pas seulement ...')
+st.image(image, caption='En France, plus de 4 millions de personnes vivaient avec le diabète en 2021. La prévalence de cette maladie chronique ne cesse d\'augmenter, passant de 5,6 % en 2015 à 6,07 % en 2021. Cette forte augmentation du nombre de cas de diabète nous place face à une véritable épidémie. Aujourd\'hui, la prise en charge du diabète représente un véritable enjeu socio-économique et de santé publique. Au cœur de ces préoccupations, nos modes de vie, mais pas seulement ...')
 
 st.title("Quels sont les différents types de diabète ?")
 st.markdown(' ')
