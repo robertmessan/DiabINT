@@ -173,15 +173,10 @@ def Diabetes_Predict():
                     else:
                         color = 'red'
                     plt.bar(['Normal'], [1], color='blue')
+                    plt.boxplot(np.random.uniform(min_val, max_val, 100), vert=False)
                     plt.bar([name], [user_value], color=color)
                     plt.title(var)
                     plt.xticks(rotation=45)
-            # Affichage des boxplots pour les intervalles normaux
-            for i, (var, (min_val, max_val)) in enumerate(normal_ranges.items()):
-                plt.subplot(2, 6, i+7)
-                plt.boxplot(np.random.uniform(min_val, max_val, 100), vert=False, widths=0.5)
-                plt.title(var + ' Normal Range')
-                plt.xticks(rotation=45)
             
             plt.tight_layout()
             st.pyplot(plt)
