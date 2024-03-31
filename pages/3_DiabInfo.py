@@ -47,7 +47,7 @@ st.markdown('Si vous êtes atteint de diabète de type 1, votre corps ne produit
 
 st.subheader('b) Diabète de type 2')
 # st.markdown(' ')
-st.markdown('Si vous souffrez de diabète de type 2, votre corps ne produit pas ou n\'utilise pas bien l'insuline. Le diabète de type 2 peut se développer à tout âge, même pendant l\'enfance. Toutefois, ce type de diabète survient le plus souvent chez les personnes d\'âge moyen ou plus âgées. Le type 2 est le type de diabète le plus courant.')
+st.markdown('Si vous souffrez de diabète de type 2, votre corps ne produit pas ou n\'utilise pas bien l\'insuline. Le diabète de type 2 peut se développer à tout âge, même pendant l\'enfance. Toutefois, ce type de diabète survient le plus souvent chez les personnes d\'âge moyen ou plus âgées. Le type 2 est le type de diabète le plus courant.')
 
 st.subheader('c) Diabète gestationnel')
 # st.markdown(' ')
