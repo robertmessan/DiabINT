@@ -49,7 +49,7 @@ st.markdown("Envisagez de vous inscrire à un cours de Pilates dans votre salle 
 
 st.header('10. Yoga')
 st.markdown("Selon une étude de 2016, le yoga peut aider les personnes atteintes de diabète de type 2 à gérer leur glycémie, leur taux de cholestérol et leur poids. Il peut également contribuer à réduire votre tension artérielle, à améliorer la qualité de votre sommeil et à stimuler votre humeur.")
-st.markdown("If you're interested in trying yoga, sign up for a class at a local studio or gym. Un professionnel qualifié peut vous aider à apprendre comment passer d'une pose à l'autre, en adoptant la bonne posture et la bonne technique de respiration.")
+#st.markdown("If you're interested in trying yoga, sign up for a class at a local studio or gym. Un professionnel qualifié peut vous aider à apprendre comment passer d'une pose à l'autre, en adoptant la bonne posture et la bonne technique de respiration.")
 
 hide_st_style = """
     <style>
