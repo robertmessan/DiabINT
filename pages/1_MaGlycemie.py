@@ -167,6 +167,7 @@ family_history_threshold = 0
 physical_activity_threshold = 150
 diastolic_pressure = 130
 systolic_pressure = 80
+taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
