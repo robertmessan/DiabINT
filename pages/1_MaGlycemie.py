@@ -6,32 +6,32 @@ pickle_in = open('models/randomForest.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 # Define the questions and answer options
-questions = ["Gender", "Polyuria (Excessive passage of Urine)", "Polydipsia (Excessive thirst)", "Sudden weight loss", "Weakness", "Polyphagia (Feeling of extreme, insatiable hunger)", "Visual blurring", "Itching", "Irritability", "Delayed healing", "Partial paresis (Weakening of a muscle)", "Muscle stiffness", "Alopecia (Baldness)", "Obesity (Excessive amount of body fat)"]
+questions = ["Sexe", "Polyurie (émission excessive d'urine)", "Polydipsie (soif excessive)", "Perte de poids soudaine", "Faiblesse", "Polyphagie (sensation de faim extrême et insatiable)", "Troubles de la vue", "démangeaisons", "irritabilité", "cicatrisation retardée", "parésie partielle (affaiblissement d'un muscle)", "raideur musculaire", "alopécie (calvitie)", "obésité (quantité excessive de graisse corporelle)"]
 options = {
-    "Gender": ["Male", "Female"],
-    "Polyuria (Excessive passage of Urine)": ["Yes", "No"],
-    "Polydipsia (Excessive thirst)": ["Yes", "No"],
-    "Sudden weight loss": ["Yes", "No"],
-    "Weakness": ["Yes", "No"],
-    "Polyphagia (Feeling of extreme, insatiable hunger)": ["Yes", "No"],
-    "Visual blurring": ["Yes", "No"],
-    "Itching": ["Yes", "No"],
-    "Irritability": ["Yes", "No"],
-    "Delayed healing": ["Yes", "No"],
-    "Partial paresis (Weakening of a muscle)": ["Yes", "No"],
-    "Muscle stiffness": ["Yes", "No"],
-    "Alopecia (Baldness)": ["Yes", "No"],
-    "Obesity (Excessive amount of body fat)": ["Yes", "No"]
+    "Sexe": ["Masculin", "Feminin"],
+    "Polyurie (émission excessive d'urine)": ["Oui", "Non"],
+    "Polydipsie (soif excessive)": ["Oui", "Non"],
+    "Perte de poids soudaine": ["Oui", "Non"],
+    "Faiblesse": ["Oui", "Non"],
+    "Polyphagie (sensation de faim extrême et insatiable)": ["Oui", "Non"],
+    "Troubles de la vue": ["Oui", "Non"],
+    "démangeaisons": ["Oui", "Non"],
+    "irritabilité": ["Oui", "Non"],
+    "cicatrisation retardée": ["Oui", "Non"],
+    "parésie partielle (affaiblissement d'un muscle)": ["Oui", "Non"],
+    "raideur musculaire": ["Oui", "Non"],
+    "alopécie (calvitie)": ["Oui", "Non"],
+    "obésité (quantité excessive de graisse corporelle)": ["Oui", "Non"]
 }
 
 # Create the form using Streamlit
 # st.title("Predict DIABETES with some simple questions")
 html_temp = """
                     <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
-                    <h3 style="color:#000;text-align:center;">Make my TEST for <span style="color:red;font-size:35px;">DIABETES</span> in  "simple Questions"</h3>
+                    <h3 style="color:#000;text-align:center;">Faire mon test pour <span style="color:red;font-size:35px;">LE DIABETE</span> en  "quelques Questions"</h3>
                     </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
-Age = st.number_input("Enter your age:",step=10.0)
+Age = st.number_input("Entrez votre age:",step=10.0)
 
 # Define variables to store the selected options
 selected_options = []
@@ -47,7 +47,7 @@ for question in questions:
 # Run the ML model when the user clicks the "Submit" button
 if st.button("Submit"):
     # Convert selected_options to a list of integers (age is already an integer)
-    selected_options = [Age] + [1 if option == "Yes" else 0 for option in selected_options]
+    selected_options = [Age] + [1 if option == "Oui" else 0 for option in selected_options]
     prediction = classifier.predict([selected_options])
 
     prediction = classifier.predict([selected_options])[0]
@@ -56,18 +56,18 @@ if st.button("Submit"):
     if prediction == 0:
         html_temp = """
                     <div style="margin-top:30px;background-color:#748c08;padding:1.5px;border-radius:20px;">
-                    <h4 style="color:white;text-align:center;">You are not diabetic 😃</h4>
+                    <h4 style="color:white;text-align:center;">Vous n'êtes pas diabétique 😃</h4>
                     </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
     else:
         html_temp = """
                     <div style="background-color:#ad0f03;padding:1.5px;border-radius:20px;">
-                    <h4 style="color:white;text-align:center;">We are really sorry to say, but it seems like you are Diabetic. ☹️ </h4>
+                    <h4 style="color:white;text-align:center;">Nous sommes vraiment désolés, mais il est fort probable que vous soyez diabétique. ☹️ </h4>
                     </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
 
       # Display the probability of being positive
-    st.header(f"The probability to be negative for the test:  **:red[{100-proba:.2f}%]**")
+    st.header(f"La probabilité d'être négatif pour le texte:  **:red[{100-proba:.2f}%]**")
     
 
 #     html_code ="""
@@ -171,38 +171,41 @@ systolic_pressure = 80
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
     if row['age'] > age_threshold and row['BMI'] > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
-        return "High Risk"
+        return "Risque Elevé"
     else:
-        return "Low Risk"
+        return "Risque Faible"
     
 html_temp = """
                     <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
-                    <h3 style="color:#000;text-align:center;">Let fill the second FORM <span style="color:green;font-size:35px;">to be SURE about </span>  "your results"</h3>
+                    <h3 style="color:#000;text-align:center;">Remplis le deuxième FORMULAIRE <span style="color:green;font-size:35px;">pour confirmer </span>  "tes résultats"</h3>
                     </div><br>""" 
 st.markdown(html_temp,unsafe_allow_html=True)  
     
-age = st.number_input("Enter age:",step=5.)
-bmi = st.number_input("Enter BMI (Body mass index):",step=5.)
-gender_map = {"Male": 0, "Female": 1}
+age = st.number_input("Entrez votre âge:",step=5.)
+poids=st.number_input("Entrez votre poids (en Kg):",step=5.)
+taille=st.number_input("Entrez votre taille (en m):",step=0.1.)
+bmi=poids/(taille**2)
+#bmi = st.number_input("Enter BMI (Body mass index):",step=5.)
+gender_map = {"Masculin": 0, "Feminin": 1}
 # Create a selection menu for gender and convert to binary
-gender = st.selectbox("Select gender", list(gender_map.keys()))
+gender = st.selectbox("Sélectionnez le sexe", list(gender_map.keys()))
 gender_binary = gender_map[gender]
 fh = {"No": 0, "Yes": 1}
-family_history = st.selectbox("Do you have any Family History of Diabetes?", list(fh.keys()))
+family_history = st.selectbox("Avez-vous des membres de votre famille ayant le diabète?", list(fh.keys()))
 family_history_binary= fh[family_history]
-physical_activity = st.number_input("Enter physical activity level (in minutes per week): ",step=10.)
-diastolic_pressure = st.number_input("Enter blood pressure history (1st Number):",step=10.)
-systolic_pressure = st.number_input("Enter blood pressure history (2nd Number):",step=10.)
+physical_activity = st.number_input("Entrez votre niveau d'activité physique (en minuite par semaine): ",step=10.)
+diastolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle (1ère prise):",step=10.)
+systolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle:",step=10.)
 
-submit = st.button('Predict 🔍')
+submit = st.button('Prédire 🔍')
 
 data = {'age': age, 'BMI': bmi, 'sex': gender_binary, 'FamilyHistory': family_history_binary, 'physical_activity': physical_activity, 'diastolic_pressure': diastolic_pressure, 'systolic_pressure': systolic_pressure }
 data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
 
 if submit:
     prediction = predict_diabetes(data.iloc[0])
-    #if prediction=="High Risk":
-    st.header(f"The outcome of the diagnostic(probability to be diabetic):  **:red[{prediction}]**")
+    #if prediction=="Risque Elevé":
+    st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
 
 
 hide_st_style = """
