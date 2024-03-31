@@ -210,12 +210,7 @@ if submit:
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
     elif prediction == "Risque Faible":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
-st.write(data.iloc[0])
-st.write(data['age'][0]> age_threshold and data['BMI'][0]>bmi_threshold)
-st.write(data['FamilyHistory'][0]> family_history_threshold and data['physical_activity'][0]< physical_activity_threshold)
-st.write(data['systolic_pressure'][0]> systolic_pressure_t and data['diastolic_pressure'][0] > diastolic_pressure_t)
-st.write(data['age'][0] > age_threshold and data['BMI'][0] > bmi_threshold and data['FamilyHistory'][0] > family_history_threshold and data['physical_activity'][0] < physical_activity_threshold and data['systolic_pressure'][0] > systolic_pressure and data['diastolic_pressure'][0] > diastolic_pressure)
-hide_st_style = """
+
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
