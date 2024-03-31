@@ -73,6 +73,22 @@ def Diabetes_Predict():
         bmi = st.number_input("indice de masse corporelle (poids en kg/(masse en m)^2):",step=10.,key=7)
         dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques(entre 0 et 1) ?",step=0.1,key=8)
         age = st.number_input("Age:",step=5.,key=9)
+        
+        # Création d'un DataFrame avec les données entrées par l'utilisateur
+        user_data = pd.DataFrame({
+            'Variable': ['glucose', 'bp', 'skin', 'insulin', 'bmi', 'dpf'],
+            'Value': [glucose, bp, skin, insulin, bmi, dpf]
+        })
+        
+        # Intervalles normaux pour chaque variable (à adapter selon les normes médicales)
+        normal_ranges = {
+            'glucose': (70, 140),
+            'bp': (60, 130),
+            'skin': (10, 30),
+            'insulin': (5, 50),
+            'bmi': (18.5, 30),
+            'dpf': (0.1, 1),
+        }
         submit = st.button('Prédire 🔍')
         if submit:
             prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
@@ -136,6 +152,26 @@ def Diabetes_Predict():
                         <h4 style="color:white;text-align:center;">{name.upper()} ... Attention, il semble que votre rapport glucose/insuline soit déséquilibré. Lisez les conseils sur notre page ! ☹️</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
+            # Intervalles normaux pour chaque variable (à adapter selon les normes médicales)
+            
+            # Comparaison des valeurs avec les intervalles normaux
+            plt.figure(figsize=(10, 8))
+            for i, (var, (min_val, max_val)) in enumerate(normal_ranges.items()):
+                plt.subplot(3, 3, i+1)
+                user_value = user_data[user_data['Variable'] == var]['Value'].iloc[0]
+                if min_val <= user_value <= max_val:
+                    color = 'green'
+                elif user_value < min_val:
+                    color = 'yellow'
+                else:
+                    color = 'red'
+                plt.bar(['Normal'], [1], color=color)
+                plt.bar([name], [user_value], color='blue')
+                plt.title(var)
+                plt.xticks(rotation=45)
+            
+            plt.tight_layout()
+            st.pyplot(plt)
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
