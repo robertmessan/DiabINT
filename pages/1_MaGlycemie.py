@@ -45,7 +45,7 @@ for question in questions:
     i=i+1
 
 # Run the ML model when the user clicks the "Submit" button
-if st.button("Submit"):
+if st.button("Soumettre"):
     # Convert selected_options to a list of integers (age is already an integer)
     selected_options = [Age] + [1 if option == "Oui" else 0 for option in selected_options]
     prediction = classifier.predict([selected_options])
@@ -171,7 +171,7 @@ taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
-    if row['age'] > age_threshold and bmi > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
+    if row['age'] > age_threshold and row['poids']/(row['taille']**2) > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
         return "Risque Eleve"
     else:
         return "Risque Faible"
@@ -184,7 +184,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
     
 age = st.number_input("Entrez votre âge:",step=5.)
 poids=st.number_input("Entrez votre poids (en Kg):",step=5.)
-taille=st.number_input("Entrez votre taille (en m):",step=0.1)
+taille=st.number_input("Entrez votre taille (en m):",value=taille,step=0.1)
 bmi=poids/(taille**2)
 #bmi = st.number_input("Enter BMI (Body mass index):",step=5.)
 gender_map = {"Masculin": 0, "Feminin": 1}
@@ -202,6 +202,7 @@ submit = st.button('Prédire 🔍')
 
 data = {'age': age, 'BMI': bmi, 'sex': gender_binary, 'FamilyHistory': family_history_binary, 'physical_activity': physical_activity, 'diastolic_pressure': diastolic_pressure, 'systolic_pressure': systolic_pressure }
 data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
+print(data)
 
 if submit:
     prediction = predict_diabetes(data.iloc[0])
