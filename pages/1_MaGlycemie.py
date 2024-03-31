@@ -56,7 +56,7 @@ if st.button("Soumettre"):
     if prediction == 0:
         html_temp = """
                     <div style="margin-top:30px;background-color:#748c08;padding:1.5px;border-radius:20px;">
-                    <h4 style="color:white;text-align:center;">Vous n'êtes pas diabétique 😃</h4>
+                    <h4 style="color:white;text-align:center;">Vous n'avez pas les symptômes du diabète 😃</h4>
                     </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
     else:
@@ -171,7 +171,7 @@ taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
-    if row['age'] > age_threshold and row['poids']/(row['taille']**2) > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
+    if row['age'] > age_threshold and bmi > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
         return "Risque Eleve"
     else:
         return "Risque Faible"
