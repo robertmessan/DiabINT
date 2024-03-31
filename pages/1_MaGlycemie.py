@@ -183,7 +183,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
     
 age = st.number_input("Entrez votre âge:",step=5.)
 poids=st.number_input("Entrez votre poids (en Kg):",step=5.)
-taille=st.number_input("Entrez votre taille (en m):",step=0.1.)
+taille=st.number_input("Entrez votre taille (en m):",step=0.1)
 bmi=poids/(taille**2)
 #bmi = st.number_input("Enter BMI (Body mass index):",step=5.)
 gender_map = {"Masculin": 0, "Feminin": 1}
