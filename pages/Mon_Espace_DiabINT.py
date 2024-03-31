@@ -171,7 +171,7 @@ def Diabetes_Predict():
                 plt.xticks(rotation=45)
             
             plt.tight_layout()
-            st.pyplot(plt)
+            plt.show()
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
