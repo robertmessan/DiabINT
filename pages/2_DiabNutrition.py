@@ -36,8 +36,8 @@ def filter_food(nutrient, disease):
 
 
 
-# st.title('Food Recommendation System 🥗')
-st.success('Welcome! Please provide your preferences for nutrient and disease to receive food recommendations.')
+
+st.success('Bienvenue ! Veuillez indiquer vos préférences en matière de nutriments et de maladies pour recevoir des recommandations alimentaires.')
 
     
     # User input for nutrient, disease, and food type
