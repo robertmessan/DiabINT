@@ -172,7 +172,7 @@ def Diabetes_Predict():
                         color = 'yellow'
                     else:
                         color = 'red'
-                    plt.bar(['Normal'], [1], color='blue')
+                    plt.axhline(y=normal_means[i], color='blue', linestyle='--', label='Normal Range')
                     plt.bar([name], [user_value], color=color)
                     plt.title(var)
                     plt.xticks(rotation=45)
