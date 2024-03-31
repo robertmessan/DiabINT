@@ -205,7 +205,7 @@ data = pd.DataFrame(data, index=[0]) # Convert dictionary to dataframe
 
 
 if submit:
-    prediction = predict_diabetes(data.iloc[0])
+    prediction = predict_diabetes(data)
     if prediction=="Risque Eleve":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
     elif prediction == "Risque Faible":
