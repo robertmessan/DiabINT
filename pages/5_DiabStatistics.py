@@ -8,7 +8,7 @@ import plotly.express as px
 
 html_temp = """
 <div style="background-color:#440270;padding:1.5px">
-<h1 style="color:white;text-align:center;">Diabetes specialists Map chart of the world🌎 </h1>
+<h1 style="color:white;text-align:center;"> Carte du monde des Spécialistes du diabète🌎 </h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 
@@ -16,7 +16,7 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 
 
-st.subheader('Diabetes specialists Map chart of the world🌎')
+st.subheader('Carte du monde des Spécialistes du diabète🌎')
 data1=pd.read_csv("data/dataR.csv")
 professions_diabete = ['Endocrinologue-diabétologue', 'Médecin spécialiste en médecine interne', 'Cardiologue',
                        'Gastro-entérologue et hépatologue', 'Ophtalmologiste', 'Néphrologue', 'Neurologue',
@@ -49,10 +49,10 @@ fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_typ
 
 # Afficher la carte
 st.plotly_chart(fig)
-st.markdown("<center><span style='color:green'>Diabetes specialists statistics</span></center>", unsafe_allow_html=True)
+st.markdown("<center><span style='color:green'>Statistiques des spécialistes du diabète</span></center>", unsafe_allow_html=True)
 
 st.markdown(' ')
-st.markdown('Take this information into consideration before your travel. You can search for statistics related to diabetes specialists of your destination!')
+st.markdown("Prenez en compte de ces informations avant votre voyage. Vous pouvez rechercher des statistiques relatives aux spécialistes du diabète de votre destination !")
 
 
 
@@ -62,7 +62,7 @@ df = pd.read_csv("data/countrywise_data.csv")
 # Create a Streamlit app
 # st.title("Diabetes Map Chart of the world")
 
-st.subheader('Diabetes estimates (20-79 y)')
+st.subheader('Estimation du diabète (20-79 ans)')
 
 # Create a selectbox for the user to choose the year
 year = st.selectbox("Select a Year", ["2000", "2011", "2021", "2030", "2045"])
@@ -70,18 +70,18 @@ year = st.selectbox("Select a Year", ["2000", "2011", "2021", "2030", "2045"])
 # Create a choropleth map chart using Plotly Express
 fig = px.choropleth(df, locations="Country/Territory", locationmode="country names",
                     color=year, hover_name="Country/Territory", range_color=[0, 20],
-                    title=f"Diabetes Prevalence by Country in {year}", width=800, height=600,template = "plotly_dark")
+                    title=f"Prévalence du diabète par pays en {year}", width=800, height=600,template = "plotly_dark")
 fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_type="equirectangular"))
 
 # Display the map chart in Streamlit
 st.plotly_chart(fig)
 
-st.markdown("<center><span style='color:green'>Diabetes report of all the countries 2000-2045</span></center>", unsafe_allow_html=True)
+st.markdown("<center><span style='color:green'>Rapport sur le diabète de tous les pays 2000-2045</span></center>", unsafe_allow_html=True)
 
 
 st.markdown(' ')
-st.markdown('According to the International Diabetes Federation, an estimated 463 million people worldwide had diabetes in 2019, representing 9.3% of the global adult population. This figure is expected to rise to 700 million by 2045.')
-st.markdown('The prevalence of diabetes varies widely by region, with the highest rates found in low- and middle-income countries. In 2019, the countries with the highest prevalence of diabetes were Tokelau (25.4%), Nauru (24.3%), and Mauritius (22.8%), while the countries with the lowest prevalence were Papua New Guinea (2.8%), Tanzania (2.9%), and Ethiopia (3.1%).')
+st.markdown("Selon la Fédération internationale du diabète, on estime que 463 millions de personnes dans le monde étaient atteintes de diabète en 2019, soit 9,3 % de la population adulte mondiale. Ce chiffre devrait atteindre 700 millions d'ici 2045.")
+st.markdown("La prévalence du diabète varie considérablement selon les régions, les taux les plus élevés étant observés dans les pays à revenu faible ou intermédiaire. En 2019, les pays où la prévalence du diabète est la plus élevée sont Tokelau (25,4 %), Nauru (24,3 %) et Maurice (22,8 %), tandis que les pays où la prévalence est la plus faible sont la Papouasie-Nouvelle-Guinée (2,8 %), la Tanzanie (2,9 %) et l'Éthiopie (3,1 %).")
 
 hide_st_style = """
     <style>
