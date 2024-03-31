@@ -171,7 +171,7 @@ taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
-    if row['age'] > age_threshold and bmi > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
+    if row['age'] > age_threshold and bmi > bmi_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
         return "Risque Eleve"
     else:
         return "Risque Faible"
