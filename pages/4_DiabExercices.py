@@ -20,7 +20,7 @@ st.header('3. Natation')
 st.markdown("Les activités aquatiques constituent une autre option d'exercice respectueuse des articulations. Par exemple, la natation, l'aquagym, l'aquajogging et d'autres activités aquatiques peuvent faire travailler votre cœur, vos poumons et vos muscles, tout en sollicitant peu vos articulations.")
 st.markdown("Une revue de 2017 a révélé que les exercices aquatiques peuvent aider à réduire le taux de sucre dans le sang, tout comme le font les exercices terrestres.")
 
-st.header('4. Les sports d'équipe')
+st.header('4. Les sports d\'équipe')
 st.markdown("Si vous avez du mal à vous motiver pour faire de l'exercice, il peut être utile de rejoindre une équipe de sport de loisir. La possibilité de socialiser avec vos coéquipiers et l'engagement que vous prenez envers eux peuvent vous aider à trouver la motivation dont vous avez besoin pour vous présenter chaque semaine.")
 st.markdown("De nombreux sports récréatifs offrent un bon entraînement aérobique. Pensez à essayer le basket-ball, le football, le softball, le tennis en couple ou l'ultimate frisbee.")
 
