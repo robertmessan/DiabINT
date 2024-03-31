@@ -5,7 +5,7 @@ import pandas as pd
 
 html_temp = """
 <div style="background-color:#f2b016;padding:1.5px">
-<h1 style="color:white;text-align:center;">Food Recommendation System 🥗</h1>
+<h1 style="color:white;text-align:center;">Système de recommandation alimentaire 🥗</h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
 
@@ -60,11 +60,11 @@ hide=['Meal_Id','Price']
 df=filtered_food.drop(columns=hide)
 
 
-if st.button('FIND FOOD 🔍'):
+if st.button('TROUVER UN REPAS 🔍'):
     if filtered_food.empty:
-        st.write('Sorry, no food recommendations found.')
+        st.write('Désolé, aucune recommandation alimentaire n'a été trouvée.')
     else:
-        st.write('Here are some food recommendations for you:')
+        st.write('Voici quelques recommandations pour vous:')
         # st.write(filtered_food)
         st.write(df)
 
