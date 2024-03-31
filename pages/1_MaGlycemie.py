@@ -211,6 +211,8 @@ if submit:
     elif prediction == "Risque Faible":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
 
+st.write("Voici la donnée:\n")
+st.write(data.iloc[0])
 
 hide_st_style = """
     <style>
