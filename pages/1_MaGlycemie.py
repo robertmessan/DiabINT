@@ -210,7 +210,7 @@ if submit:
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
     elif prediction == "Risque Faible":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
-
+hide_st_style = """
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
