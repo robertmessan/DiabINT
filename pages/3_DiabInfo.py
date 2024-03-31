@@ -58,7 +58,7 @@ st.markdown('Le diabète monogénique, qui est une forme héréditaire de diabè
 st.markdown(' ')
 
 st.title('A quel point le diabète est-il fréquent?')
-st.markdown('En France, plus de **:red[4 millions de personnes vivaient avec le diabète en 2021]**. La prévalence de cette maladie chronique est en constante augmentation, passant de 5,6 % en 2015 à 6,07 % en 2021. Cette forte augmentation du nombre de cas de diabète nous place face à une véritable épidémie. La prise en charge du diabète représente aujourd'hui un véritable enjeu socio-économique et de santé publique.')
+st.markdown('En France, plus de **:red[4 millions de personnes vivaient avec le diabète en 2021]**. La prévalence de cette maladie chronique est en constante augmentation, passant de 5,6 % en 2015 à 6,07 % en 2021. Cette forte augmentation du nombre de cas de diabète nous place face à une véritable épidémie. La prise en charge du diabète représente aujourd\'hui un véritable enjeu socio-économique et de santé publique.')
 
 
 import altair as alt
@@ -118,7 +118,7 @@ st.markdown('Vous êtes plus susceptible de développer un diabète de type 2 si
 
 
 st.title('Quels sont les problèmes de santé que peuvent développer les personnes atteintes de Diabète?')
-st.markdown('Au fil du temps, l'hyperglycémie entraîne des problèmes tels que')
+st.markdown('Au fil du temps, l'\hyperglycémie entraîne des problèmes tels que')
 st.markdown('🔴 Maladie cardiaque')
 st.markdown('🔴 Accident vasculaire cérébral')
 st.markdown('🔴 Maladie du rein')
