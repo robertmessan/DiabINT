@@ -27,6 +27,8 @@ df_selected = data1
 # Créer une boîte de sélection pour choisir une profession
 
 selected_profession = st.selectbox("Choisissez une profession",professions_diabete )
+# Filtrer les données en fonction de la profession sélectionnée
+df_selected = df_selected[df_selected['Profession'] == selected_profession]
 
 # Extraire les coordonnées de latitude et longitude à partir de la variable 'Coordonnées'
 df_selected[['Latitude', 'Longitude']] = df_selected['Coordonnées'].apply(lambda x: pd.Series(x.split(','))).astype(float)
