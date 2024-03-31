@@ -118,7 +118,7 @@ st.markdown('Vous êtes plus susceptible de développer un diabète de type 2 si
 
 
 st.title('Quels sont les problèmes de santé que peuvent développer les personnes atteintes de Diabète?')
-st.markdown('Au fil du temps, l'\hyperglycémie entraîne des problèmes tels que')
+st.markdown('Au fil du temps, l\'hyperglycémie entraîne des problèmes tels que')
 st.markdown('🔴 Maladie cardiaque')
 st.markdown('🔴 Accident vasculaire cérébral')
 st.markdown('🔴 Maladie du rein')
