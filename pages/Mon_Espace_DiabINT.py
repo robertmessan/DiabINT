@@ -67,10 +67,10 @@ def Diabetes_Predict():
         bp =  st.number_input("Pression artérielle diastolique (mm Hg):",step=10.)
         skin = st.number_input("Épaisseur du pli cutané du triceps (mm):",step=5.)
         insulin = st.number_input("Insuline sérique sur 2 heures (mu U/ml):",step=10.)
-        poids= st.number_input("Poids (en kg):",step=10.,key=7)
-        taille= st.number_input("Taille (en m):",step=0.1,key=7)
+        #poids= st.number_input("Poids (en kg):",step=10.,key=7)
+        #taille= st.number_input("Taille (en m):",step=0.1,key=7)
         bmi=poids/(taille ** 2)
-        #bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):",step=10.,key=7)
+        bmi = st.number_input("indice de masse corporelle (poids en kg/(masse en m)^2):",step=10.,key=7)
         dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques ?",step=0.1,key=8)
         age = st.number_input("Age:",step=5.,key=9)
         submit = st.button('Prédire 🔍')
@@ -126,14 +126,14 @@ def Diabetes_Predict():
                 # st.success(name.upper()+'!!! You're healthy! Your glucose/insulin balance is good😃')
                 html_temp = f"""
                         <div style="background-color:#748c08;padding:1.5px;border-radius:20px;">
-                        <h4 style="color:white;text-align:center;">{name.upper()} You are healthy! Your glucose/insulin balance is good 😃</h4>
+                        <h4 style="color:white;text-align:center;">{name.upper()}!!! Vous êtes en bon état ! Votre équilibre glucose/insuline est bon😃</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
             else:
                 # st.warning(name.upper()+'... we are really sorry to say, but it seems like you are Diabetic. ☹️')
                 html_temp = f"""
                         <div style="background-color:#ad0f03;padding:1.5px;border-radius:20px;">
-                        <h4 style="color:white;text-align:center;">{name.upper()} Beware, it appears that your glucose/insulin ratio is unbalanced. Read the advice on our page! ☹️</h4>
+                        <h4 style="color:white;text-align:center;">{name.upper()} ... Attention, il semble que votre rapport glucose/insuline soit déséquilibré. Lisez les conseils sur notre page ! ☹️</h4>
                         </div><br>"""
                 st.markdown(html_temp,unsafe_allow_html=True)
     except Exception as e:
