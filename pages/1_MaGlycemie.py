@@ -171,7 +171,7 @@ taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
-    if row['age'] > age_threshold and row['BMI'] > bmi_threshold and row['sex'] > sex_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
+    if row['age'] > age_threshold and row['BMI'] > bmi_threshold and row['FamilyHistory'] > family_history_threshold and row['physical_activity'] < physical_activity_threshold and row['systolic_pressure'] > systolic_pressure and row['diastolic_pressure'] > diastolic_pressure :
         return "Risque Eleve"
     else:
         return "Risque Faible"
@@ -210,10 +210,8 @@ if submit:
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:red[{prediction}]**")
     elif prediction == "Risque Faible":
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
-
-st.write("Voici la donnée:\n")
 st.write(data.iloc[0])
-
+st.write(data['age'] > age_threshold and data['BMI'] > bmi_threshold and data['FamilyHistory'] > family_history_threshold and data['physical_activity'] < physical_activity_threshold and data['systolic_pressure'] > systolic_pressure and data['diastolic_pressure'] > diastolic_pressure)
 hide_st_style = """
     <style>
     #MainMenu {visibility: hidden;}
