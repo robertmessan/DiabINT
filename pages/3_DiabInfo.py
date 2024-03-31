@@ -11,7 +11,7 @@ html_temp = """
 st.markdown(html_temp,unsafe_allow_html=True)
 
 
-st.title('C\est quoi le Diabète?')
+st.title('C\'est quoi le Diabète?')
 st.subheader('Dans cette Section:')
 st.markdown(" 👉:blue[Quels sont les différents types de diabète ?]") 
 st.markdown(" 👉:blue[A quel point le diabète est-il fréquent ?]") 
