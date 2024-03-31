@@ -113,7 +113,7 @@ st.markdown("<center><span style='color:green'>Rapport sur le Diabète en France
 
 st.markdown(' ')
 st.title('Quelles sont les personnes les plus susceptibles de développer un diabète de type 2 ?')
-st.markdown('Vous êtes plus susceptible de développer un diabète de type 2 si vous avez 45 ans ou plus, si vous avez des antécédents familiaux de diabète ou si vous êtes en surpoids. La sédentarité, la race et certains problèmes de santé tels que l'hypertension artérielle influent également sur le risque de développer un diabète de type 2. Vous êtes également plus susceptible de développer un diabète de type 2 si vous avez un prédiabète ou si vous avez souffert d'un diabète gestationnel pendant votre grossesse. En savoir plus sur les facteurs de risque du diabète de type 2.')
+st.markdown('Vous êtes plus susceptible de développer un diabète de type 2 si vous avez 45 ans ou plus, si vous avez des antécédents familiaux de diabète ou si vous êtes en surpoids. La sédentarité, la race et certains problèmes de santé tels que l\'hypertension artérielle influent également sur le risque de développer un diabète de type 2. Vous êtes également plus susceptible de développer un diabète de type 2 si vous avez un prédiabète ou si vous avez souffert d\'un diabète gestationnel pendant votre grossesse. En savoir plus sur les facteurs de risque du diabète de type 2.')
 
 
 
