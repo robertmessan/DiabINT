@@ -177,7 +177,7 @@ def Diabetes_Predict():
                     plt.bar([name], [user_value], color=color)
                     plt.title(var)
                     plt.xticks(rotation=45)
-            
+            plt.legend()
             plt.tight_layout()
             st.pyplot(plt)
     except Exception as e:
