@@ -165,13 +165,13 @@ bmi_threshold = 30
 sex_threshold = 0
 family_history_threshold = 0
 physical_activity_threshold = 150
-diastolic_pressure = 130
-systolic_pressure = 80
+diastolic_pressure_t = 130
+systolic_pressure_t = 80
 taille=0.1
 
 # Function to predict diabetes based on threshold values
 def predict_diabetes(row):
-    if row['age'][0] > age_threshold and row['BMI'][0] > bmi_threshold and row['FamilyHistory'][0] > family_history_threshold and row['physical_activity'][0] < physical_activity_threshold and row['systolic_pressure'][0] > systolic_pressure and row['diastolic_pressure'][0] > diastolic_pressure :
+    if row['age'][0] > age_threshold and row['BMI'][0] > bmi_threshold and row['FamilyHistory'][0] > family_history_threshold and row['physical_activity'][0] < physical_activity_threshold and row['systolic_pressure'][0] > systolic_pressure_t and row['diastolic_pressure'][0] > diastolic_pressure_t :
         return "Risque Eleve"
     else:
         return "Risque Faible"
@@ -213,7 +213,7 @@ if submit:
 st.write(data.iloc[0])
 st.write(data['age'][0]> age_threshold and data['BMI'][0]>bmi_threshold)
 st.write(data['FamilyHistory'][0]> family_history_threshold and data['physical_activity'][0]< physical_activity_threshold)
-st.write(data['systolic_pressure'][0]> systolic_pressure and data['diastolic_pressure'][0] > diastolic_pressure)
+st.write(data['systolic_pressure'][0]> systolic_pressure_t and data['diastolic_pressure'][0] > diastolic_pressure_t)
 st.write(data['age'][0] > age_threshold and data['BMI'][0] > bmi_threshold and data['FamilyHistory'][0] > family_history_threshold and data['physical_activity'][0] < physical_activity_threshold and data['systolic_pressure'][0] > systolic_pressure and data['diastolic_pressure'][0] > diastolic_pressure)
 hide_st_style = """
     <style>
