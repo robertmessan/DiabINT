@@ -178,7 +178,7 @@ def predict_diabetes(row):
     
 html_temp = """
                     <div style="margin-top:30px;background-color:#f5de31;color:#000;padding:1.5px;border-radius:20px;">
-                    <h3 style="color:#000;text-align:center;">Remplis le deuxième FORMULAIRE <span style="color:green;font-size:35px;">pour confirmer </span>  "tes résultats"</h3>
+                    <h3 style="color:#000;text-align:center;">Remplissez le deuxième FORMULAIRE <span style="color:green;font-size:35px;">pour confirmer </span>  "vos résultats"</h3>
                     </div><br>""" 
 st.markdown(html_temp,unsafe_allow_html=True)  
     
