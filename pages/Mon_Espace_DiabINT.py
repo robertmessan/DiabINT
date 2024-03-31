@@ -73,7 +73,7 @@ def Diabetes_Predict():
         #bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):",step=10.,key=7)
         dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques ?",step=0.1,key=8)
         age = st.number_input("Age:",step=5.,key=9)
-        submit = st.button('Predict 🔍')
+        submit = st.button('Prédire 🔍')
         if submit:
             prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
             # html = f"""
