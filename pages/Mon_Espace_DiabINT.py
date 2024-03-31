@@ -31,7 +31,7 @@ def Diabetes_Predict():
         # st.subheader(f"Welcome!!! {username} ")
         html_temp = """
         <div style="background-color:tomato;padding:1.5px">
-        <h1 style="color:white;text-align:center;">Diabetes Monitoring System 💉</h1>
+        <h1 style="color:white;text-align:center;">Système de Gestion du Diabète 💉</h1>
         </div><br>"""
         st.markdown(html_temp,unsafe_allow_html=True)
      
@@ -61,7 +61,7 @@ def Diabetes_Predict():
             # st.stop()
         
         st.header('Diabetes Monitoring System')
-        name = st.text_input("Enter your Name:",value=username)
+        name = st.text_input("Entrez votre nom:",value=username)
         pregnancy = st.number_input("No. of times pregnant:",step=1.)
         glucose = st.number_input("Plasma Glucose Concentration :",step=10.)
         bp =  st.number_input("Diastolic blood pressure (mm Hg):",step=10.)
