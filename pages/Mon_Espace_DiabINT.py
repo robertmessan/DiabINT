@@ -155,23 +155,24 @@ def Diabetes_Predict():
             # Intervalles normaux pour chaque variable (à adapter selon les normes médicales)
             
             # Comparaison des valeurs avec les intervalles normaux
-            plt.figure(figsize=(10, 6))
-            for i, (var, (min_val, max_val)) in enumerate(normal_ranges.items()):
-                if var in user_data['Variable'].values:  # Vérifie si la variable est saisie par l'utilisateur
-                    plt.subplot(2, 3, i+1)
-                    user_value = user_data[user_data['Variable'] == var]['Value'].iloc[0]
-                    if min_val <= user_value <= max_val:
-                        color = 'green'
-                    elif user_value < min_val:
-                        color = 'yellow'
-                    else:
-                        color = 'red'
-                    plt.bar(['Normal'], [1], color='blue')
-                    plt.bar([name], [user_value], color=color)
-                    plt.title(var)
-                    plt.xticks(rotation=45)
+            # Barres d'erreur pour les intervalles normaux
+            normal_means = [sum(range_) / 2 for range_ in normal_ranges.values()]
+            normal_errors = [(max_ - min_) / 2 for min_, max_ in normal_ranges.values()]
             
+            # Comparaison des valeurs avec les intervalles normaux
+            plt.figure(figsize=(10, 6))
+            for i, (var, _) in enumerate(normal_ranges.items()):
+                if var in user_data['Variable'].values:  # Vérifie si la variable est saisie par l'utilisateur
+                    plt.bar(var, user_data[user_data['Variable'] == var]['Value'].iloc[0], color='blue', label=name)
+                    plt.errorbar(var, normal_means[i], yerr=normal_errors[i], fmt='o', color='black', label='Normal Range')
+            
+            plt.title('Comparaison des variables avec les intervalles normaux')
+            plt.xlabel('Variables')
+            plt.ylabel('Valeurs')
+            plt.legend()
+            plt.xticks(rotation=45)
             plt.tight_layout()
+            
             st.pyplot(plt)
     except Exception as e:
         Login_and_Registration.loginAndRegister()
