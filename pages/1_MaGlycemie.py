@@ -212,7 +212,7 @@ if submit:
         st.header(f"Le résultat du diagnostic(probabilité d'être diabétique):  **:green[{prediction}]**")
 st.write(data.iloc[0])
 st.write(data['age'][0])
-#st.write(data['age'].iloc[1] > age_threshold and data['BMI'].iloc[1] > bmi_threshold and data['FamilyHistory'].iloc[1] > family_history_threshold and data['physical_activity'].iloc[1] < physical_activity_threshold and data['systolic_pressure'].iloc[1] > systolic_pressure and data['diastolic_pressure'].iloc[1] > diastolic_pressure)
+st.write(data['age'][0] > age_threshold and data['BMI'][0] > bmi_threshold and data['FamilyHistory'][0] > family_history_threshold and data['physical_activity'][0] < physical_activity_threshold and data['systolic_pressure'][0] > systolic_pressure and data['diastolic_pressure'][0] > diastolic_pressure)
 hide_st_style = """
     <style>
     #MainMenu {visibility: hidden;}
