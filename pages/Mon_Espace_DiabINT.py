@@ -172,8 +172,8 @@ def Diabetes_Predict():
                         color = 'yellow'
                     else:
                         color = 'red'
-                    plt.bar(['Normal'], [1], color='blue')
-                    plt.boxplot(np.random.uniform(min_val, max_val, 100), vert=False)
+                    plt.boxplot(['Normal'], [1], color='blue')
+                    #plt.boxplot(np.random.uniform(min_val, max_val, 100), vert=False)
                     plt.bar([name], [user_value], color=color)
                     plt.title(var)
                     plt.xticks(rotation=45)
