@@ -18,7 +18,8 @@ st.markdown(html_temp,unsafe_allow_html=True)
 
 st.subheader('Carte du monde des Spécialistes du diabète🌎')
 data1=pd.read_csv("data/dataR.csv")
-professions_diabete = ['Endocrinologue-diabétologue', 'Spécialiste en médecine interne', 'Cardiologue',
+#, 'Spécialiste en médecine interne'
+professions_diabete = ['Endocrinologue-diabétologue', 'Cardiologue',
                        'Gastro-entérologue et hépatologue', 'Ophtalmologiste', 'Néphrologue', 'Neurologue',
                        'Pédiatre', 'Chirurgien-dentiste spécialiste en médecine bucco-dentaire',
                        'Dermatologue et vénérologue','Médecin généraliste']
