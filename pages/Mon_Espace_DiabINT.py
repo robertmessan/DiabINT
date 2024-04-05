@@ -180,7 +180,13 @@ def Diabetes_Predict():
             plt.legend()
             plt.tight_layout()
             st.pyplot(plt)
-            st.markdown("bmi signifie l'indice de masse corporelle!")
+            st.markdown("🔴 bmi pour indice de masse corporelle")
+            st.markdown("🔴 dpf pour pour la fonction de pedigree du diabète")
+
+
+
+
+            st.markdown("Partagez votre rapport avec votre médecin")
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
