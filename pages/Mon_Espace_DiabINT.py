@@ -180,6 +180,7 @@ def Diabetes_Predict():
             plt.legend()
             plt.tight_layout()
             st.pyplot(plt)
+            st.markdown("bmi signifie l'indice de masse corporelle!")
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
