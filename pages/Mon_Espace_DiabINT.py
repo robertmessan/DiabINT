@@ -183,10 +183,6 @@ def Diabetes_Predict():
             st.markdown("🔴 bmi pour indice de masse corporelle")
             st.markdown("🔴 dpf pour pour la fonction de pedigree du diabète")
 
-
-
-
-            st.header("Sauvegardez l'image de votre tableau de bord pour suivre votre équilibre glucose/insuline")
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
