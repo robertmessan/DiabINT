@@ -186,7 +186,7 @@ def Diabetes_Predict():
 
 
 
-            st.markdown("Partagez votre rapport avec votre médecin")
+            st.header("Vous pourrez sauvegarger l'image de votre tableau de bord pour suivre votre équilibre glucose/insuline")
     except Exception as e:
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
