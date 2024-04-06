@@ -22,8 +22,8 @@ st.write(data1['Profession'].unique())
 #, 'Spécialiste en médecine interne'
 professions_diabete = ['Endocrinologue-diabétologue', 'Cardiologue',
                        'Gastro-entérologue et hépatologue', 'Ophtalmologiste', 'Néphrologue', 'Neurologue',
-                       'Pédiatre', 'Chirurgiens-dentistes spécialiste en médecine bucco-dentaire',
-                       'Dermatologue et vénérologue','Médecin généraliste','Cancérologue médical']
+                       'Pédiatre', # 'Chirurgiens-dentistes spécialiste en médecine bucco-dentaire',
+                       'Dermatologue et vénérologue','Médecin généraliste']
 df_selected = data1
 
 # Créer une boîte de sélection pour choisir une profession
