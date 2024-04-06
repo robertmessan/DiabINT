@@ -190,8 +190,8 @@ def Diabetes_Predict():
         Login_and_Registration.loginAndRegister()
         st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
     st.subheader("Envoyer mes résultats à mon Médecin")
-    email = st.text_input("Votre adresse e-mail:")
-    doctor_email = st.text_input("Adresse e-mail de votre médecin:")
+    email = st.text_input("Votre adresse e-mail:",type="email")
+    doctor_email = st.text_input("Adresse e-mail de votre médecin:",type="email")
     # Afficher le formulaire de contact
     contact_form = """
     <form action="https://formsubmit.co/{doctor_email}" method="POST">
