@@ -21,8 +21,8 @@ data1=pd.read_csv("data/dataR.csv")
 #, 'Spécialiste en médecine interne'
 professions_diabete = ['Endocrinologue-diabétologue', 'Cardiologue',
                        'Gastro-entérologue et hépatologue', 'Ophtalmologiste', 'Néphrologue', 'Neurologue',
-                       'Pédiatre', 'Chirurgien-dentiste spécialiste en médecine bucco-dentaire',
-                       'Dermatologue et vénérologue','Médecin généraliste']
+                       'Pédiatre', 'Chirurgiens-dentistes spécialiste en médecine bucco-dentaire',
+                       'Dermatologue et vénérologue','Médecin généraliste','Cancérologue médical']
 df_selected = data1
 
 # Créer une boîte de sélection pour choisir une profession
