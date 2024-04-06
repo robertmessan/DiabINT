@@ -187,14 +187,12 @@ def Diabetes_Predict():
             st.markdown("🔴 dpf pour pour la fonction de pedigree du diabète")
 
         st.subheader("Envoyer mes résultats à mon Médecin")
-        email = st.text_input("Votre adresse e-mail:")
-        doctor_email = st.text_input("Adresse e-mail de votre médecin:")
         # Afficher le formulaire de contact
         contact_form = """
         <form action="https://formsubmit.co/robertmessan30@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="name" value="{name}">
-            <input type="hidden" name="email" value="{email}">
+            <input type="hidden" name="name"  placeholder="{name}">
+            <input type="email" name="email" placeholder="votre email">
             <input type="hidden" name="image" value="{img_path}">
             <input type="hidden" name="prediction" value="{prediction}">
             <textarea name="message" style="display:none;">Résultat de la prédiction et image en pièce jointe.</textarea>
