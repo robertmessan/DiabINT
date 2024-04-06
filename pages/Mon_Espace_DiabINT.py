@@ -21,7 +21,7 @@ classifier = pickle.load(pickle_in)
 # st.set_page_config(page_title = "Diabetes Prediction")
 st.set_page_config(layout="wide")
 
-img_path = 'prediction_plot.png'
+img_path = 'data/diabete1.png'
 def Diabetes_Predict():
     try:
         # st.button('LOGOUT')
