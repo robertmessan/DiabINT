@@ -21,7 +21,7 @@ classifier = pickle.load(pickle_in)
 # st.set_page_config(page_title = "Diabetes Prediction")
 st.set_page_config(layout="wide")
 
-img_path = 'data/diabete1.png'
+#img_path = 'data/diabete1.png'
 def Diabetes_Predict():
     try:
         # st.button('LOGOUT')
@@ -181,26 +181,26 @@ def Diabetes_Predict():
             plt.tight_layout()
             st.pyplot(plt)
             #img_path = 'prediction_plot.png'
-            plt.savefig(img_path)
+            #plt.savefig(img_path)
             #st.image(img_path, use_column_width=True)
             st.markdown("🔴 bmi pour indice de masse corporelle")
             st.markdown("🔴 dpf pour pour la fonction de pedigree du diabète")
 
-        st.subheader("Envoyer mes résultats à mon Médecin")
+        #st.subheader("Envoyer mes résultats à mon Médecin")
         # Afficher le formulaire de contact
-        contact_form = """
-        <form action="https://formsubmit.co/robertmessan30@gmail.com" method="POST">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="name"  placeholder="{name}">
-            <input type="email" name="email" placeholder="votre email">
-            <input type="hidden" name="image" value="{img_path}">
-            <input type="hidden" name="prediction" value="{prediction}">
-            <textarea name="message" style="display:none;">Résultat de la prédiction et image en pièce jointe.</textarea>
-            <input type="hidden" name="_next" value="https://voyag-int.rf.gd" />
-            <button type="submit">Envoyez mes résultats à mon médecin</button>
-        </form>
+        #contact_form = """
+        #<form action="https://formsubmit.co/robertmessan30@gmail.com" method="POST">
+           # <input type="hidden" name="_captcha" value="false">
+            #<input type="hidden" name="name"  placeholder="{name}">
+            #<input type="email" name="email" placeholder="votre email">
+           # <input type="hidden" name="image" value="{img_path}">
+            #<input type="hidden" name="prediction" value="{prediction}">
+            #<textarea name="message" style="display:none;">Résultat de la prédiction et image en pièce jointe.</textarea>
+            #<input type="hidden" name="_next" value="https://voyag-int.rf.gd" />
+            #<button type="submit">Envoyez mes résultats à mon médecin</button>
+        #</form>
         """ #.format(doctor_email=doctor_email, name=name, email=email, image=img_path,prediction=prediction)            
-        st.markdown(contact_form, unsafe_allow_html=True)
+        #st.markdown(contact_form, unsafe_allow_html=True)
             
     except Exception as e:
         Login_and_Registration.loginAndRegister()
