@@ -199,7 +199,7 @@ def Diabetes_Predict():
             #<input type="hidden" name="_next" value="https://voyag-int.rf.gd" />
             #<button type="submit">Envoyez mes résultats à mon médecin</button>
         #</form>
-        """ #.format(doctor_email=doctor_email, name=name, email=email, image=img_path,prediction=prediction)            
+        #""" .format(doctor_email=doctor_email, name=name, email=email, image=img_path,prediction=prediction)            
         #st.markdown(contact_form, unsafe_allow_html=True)
             
     except Exception as e:
