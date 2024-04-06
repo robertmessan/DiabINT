@@ -21,7 +21,7 @@ classifier = pickle.load(pickle_in)
 # st.set_page_config(page_title = "Diabetes Prediction")
 st.set_page_config(layout="wide")
 
-img_path=''
+img_path = 'prediction_plot.png'
 def Diabetes_Predict():
     try:
         # st.button('LOGOUT')
@@ -180,7 +180,7 @@ def Diabetes_Predict():
             plt.legend()
             plt.tight_layout()
             st.pyplot(plt)
-            img_path = 'prediction_plot.png'
+            #img_path = 'prediction_plot.png'
             plt.savefig(img_path)
             #st.image(img_path, use_column_width=True)
             st.markdown("🔴 bmi pour indice de masse corporelle")
