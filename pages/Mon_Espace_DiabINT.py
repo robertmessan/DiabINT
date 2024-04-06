@@ -182,7 +182,7 @@ def Diabetes_Predict():
             st.pyplot(plt)
             img_path = 'prediction_plot.png'
             plt.savefig(img_path)
-            st.image(img_path, use_column_width=True)
+            #st.image(img_path, use_column_width=True)
             st.markdown("🔴 bmi pour indice de masse corporelle")
             st.markdown("🔴 dpf pour pour la fonction de pedigree du diabète")
             
