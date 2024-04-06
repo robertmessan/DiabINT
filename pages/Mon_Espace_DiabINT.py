@@ -196,11 +196,12 @@ def Diabetes_Predict():
             <input type="hidden" name="name" value="{name}">
             <input type="hidden" name="email" value="{email}">
             <input type="hidden" name="image" value="{img_path}">
+            <input type="hidden" name="prediction" value="{prediction}">
             <textarea name="message" style="display:none;">Résultat de la prédiction et image en pièce jointe.</textarea>
             <input type="hidden" name="_next" value="https://voyag-int.rf.gd" />
             <button type="submit">Envoyez mes résultats à mon médecin</button>
         </form>
-        """ #.format(doctor_email=doctor_email, name=name, email=email, image=img_path)            
+        """ .format(doctor_email=doctor_email, name=name, email=email, image=img_path,prediction=prediction)            
         st.markdown(contact_form, unsafe_allow_html=True)
             
     except Exception as e:
