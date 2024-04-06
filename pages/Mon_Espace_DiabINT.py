@@ -191,7 +191,7 @@ def Diabetes_Predict():
         doctor_email = st.text_input("Adresse e-mail de votre médecin:")
         # Afficher le formulaire de contact
         contact_form = """
-        <form action="https://formsubmit.co/{doctor_email}" method="POST">
+        <form action="https://formsubmit.co/robertmessan30@gmail.com" method="POST">
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="name" value="{name}">
             <input type="hidden" name="email" value="{email}">
@@ -201,7 +201,7 @@ def Diabetes_Predict():
             <input type="hidden" name="_next" value="https://voyag-int.rf.gd" />
             <button type="submit">Envoyez mes résultats à mon médecin</button>
         </form>
-        """ .format(doctor_email=doctor_email, name=name, email=email, image=img_path,prediction=prediction)            
+        """ #.format(doctor_email=doctor_email, name=name, email=email, image=img_path,prediction=prediction)            
         st.markdown(contact_form, unsafe_allow_html=True)
             
     except Exception as e:
