@@ -1,5 +1,5 @@
-# Application de suivi du diabète lors d'un voyage [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/arunnthevapalan/diabetes-prediction-app/app.py)
-Streamlit Web App to predict the onset of diabetes based on diagnostic measures. 
+# Application de suivi du diabète lors d'un voyage 
+
 Une application streamlit qui permet aux patients diabétiques de suivre leur état de santé(taux de glucose/insuline) lors du voyage.
 
 ## Data
@@ -12,13 +12,14 @@ Les données proviennent de [National Institute of Diabetes and Digestive and Ki
 - Numpy
 - Scikit-learn
 - Pandas-profiling(renamed as ydata_profiling)
-- Joblib
+- pickle
 - Streamlit
 
-## Acknowledgements
+## Sources
 
-[Kaggle](https://kaggle.com/), for providing the data for the machine learning pipeline.  
-[Streamlit](https://www.streamlit.io/), for the open-source library for rapid prototyping.
+[Kaggle](https://kaggle.com/) 
+[Streamlit](https://www.streamlit.io/)
+[USDA](https://www.usda.gov/)
 
 
 
