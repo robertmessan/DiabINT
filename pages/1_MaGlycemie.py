@@ -67,7 +67,7 @@ if st.button("Soumettre"):
         st.markdown(html_temp,unsafe_allow_html=True)
 
       # Display the probability of being positive
-    st.header(f"La probabilité d'être négatif pour le texte:  **:red[{100-proba:.2f}%]**")
+    st.header(f"La probabilité d'être négatif pour le test:  **:red[{100-proba:.2f}%]**")
     
 
 #     html_code ="""
