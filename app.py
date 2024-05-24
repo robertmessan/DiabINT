@@ -6,7 +6,7 @@ import numpy as np
 import datetime as dt
 import altair as alt
 
-im2=Image.open("image/logo_MonMedecin.jpg")
+im2=Image.open("images/logo_MonMedecin.jpg")
 im1=Image.open("data/diabetes_image.jpg")
 st.set_page_config(page_title="DiabINT_SudParis",page_icon=im2, layout="wide")
 @st.cache_data#(allow_output_mutation=True)
