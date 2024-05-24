@@ -28,7 +28,7 @@ def inference(row, scaler, model, feat_cols):
 st.title('Voyager avec DiabINT')
 st.markdown('<h3 style="color: green;">Suivez de plus près votre équilibre taux de glucose/taux d\'insuline pour voyager en toute tranquilité. Déterminer en temps réel l\'influence de votre alimentation sur cet équilibre pour profiter pleinement de votre voyage. Voyagez sans souci, voyagez avec DiabINT!</3>', unsafe_allow_html=True)
 
-image = Image.open('data/diabetes_image.jpg')
+image = Image.open('images/logo_MonMedecin.jpg')
 st.image(image, use_column_width=True)
 
 html_temp = """
