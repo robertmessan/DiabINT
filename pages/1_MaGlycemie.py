@@ -2,6 +2,9 @@
 import streamlit as st
 import pickle
 
+im2=Image.open("images/logo_MonMedecin.jpg")
+im1=Image.open("data/diabetes_image.jpg")
+st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
 pickle_in = open('models/randomForest.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
