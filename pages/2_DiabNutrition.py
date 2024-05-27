@@ -2,7 +2,9 @@
 import streamlit as st
 import pandas as pd
 
-
+im2=Image.open("images/logo_MonMedecin.jpg")
+im1=Image.open("data/diabetes_image.jpg")
+st.set_page_config(page_title="Mon alimentation",page_icon=im2, layout="wide")
 html_temp = """
 <div style="background-color:#f2b016;padding:1.5px">
 <h1 style="color:white;text-align:center;">Système de recommandation alimentaire 🥗</h1>
