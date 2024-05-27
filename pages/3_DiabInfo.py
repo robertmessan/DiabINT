@@ -3,6 +3,9 @@ from PIL import Image
 import pandas as pd
 import numpy as np
 
+im2=Image.open("images/logo_MonMedecin.jpg")
+im1=Image.open("data/diabetes_image.jpg")
+st.set_page_config(page_title="Mes Infos",page_icon=im2, layout="wide")
 
 html_temp = """
 <div style="background-color:#748c08;padding:1.5px">
