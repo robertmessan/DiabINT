@@ -1,6 +1,7 @@
 
 import streamlit as st
 import pickle
+from PIL import Image
 
 im2=Image.open("images/logo_MonMedecin.jpg")
 im1=Image.open("data/diabetes_image.jpg")
