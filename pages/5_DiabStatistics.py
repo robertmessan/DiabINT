@@ -5,7 +5,9 @@ import pandas as pd
 import streamlit as st
 import plotly.express as px
 
-
+im2=Image.open("images/logo_MonMedecin.jpg")
+im1=Image.open("data/diabetes_image.jpg")
+st.set_page_config(page_title="Mes statistiques",page_icon=im2, layout="wide")
 html_temp = """
 <div style="background-color:#440270;padding:1.5px">
 <h1 style="color:white;text-align:center;"> Carte du monde des Spécialistes du diabète🌎 </h1>
