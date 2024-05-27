@@ -4,6 +4,7 @@
 import pandas as pd
 import streamlit as st
 import plotly.express as px
+from PIL import Image
 
 im2=Image.open("images/logo_MonMedecin.jpg")
 im1=Image.open("data/diabetes_image.jpg")
