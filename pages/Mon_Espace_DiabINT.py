@@ -11,6 +11,7 @@ import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
 import pages
+from PIL import Image
 from pages import Login_and_Registration
 
 
