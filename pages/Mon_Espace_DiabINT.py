@@ -14,12 +14,11 @@ import pages
 from pages import Login_and_Registration
 
 
+im2=Image.open("images/logo_MonMedecin.jpg")
+st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
 
 pickle_in = open('models/logisticRegr.pkl', 'rb')
 classifier = pickle.load(pickle_in)
-
-# st.set_page_config(page_title = "Diabetes Prediction")
-st.set_page_config(layout="wide")
 
 #img_path = 'data/diabete1.png'
 def Diabetes_Predict():
