@@ -40,7 +40,7 @@ html_temp1 = """
 <div style="background-color:#800080;padding:1.5px">
 #<h1 style="color:white;text-align:center;">Trouver les bonnes statistiques 📊</h1>
 <h1 style="color:white;text-align:center;">
-  <a href="#DiabInfo" style="color:white;text-decoration:none;">Trouver les bonnes statistiques 📊</a>
+  <a href="?page=DiabInfo" style="color:white;text-decoration:none;">Trouver les bonnes statistiques 📊</a>
 </h1>
 </div><br>"""
 st.markdown(html_temp1,unsafe_allow_html=True)
