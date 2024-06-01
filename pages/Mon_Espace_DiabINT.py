@@ -85,7 +85,7 @@ def Diabetes_Predict():
             'glucose': (70, 140),
             'bp': (60, 130),
             'skin': (10, 30),
-            'insulin': (40, 110),
+            'insulin': (40, 90),
             'bmi': (18.5, 30),
             'dpf': (0.1, 1),
         }
