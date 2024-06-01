@@ -41,19 +41,23 @@ st.markdown(html_temp,unsafe_allow_html=True)
 html_temp1 = """
 <div style="background-color:#800080;padding:1.5px">
 <h1 style="color:white;text-align:center;">
-  <a href="DiabStatistics" style="color:white;text-decoration:none;">Trouver les bonnes statistiques 📊</a>
+  <a href="/DiabStatistics" style="color:white;text-decoration:none;">Trouver les bonnes statistiques 📊</a>
 </h1>
 </div><br>"""
 st.markdown(html_temp1,unsafe_allow_html=True)
 html_temp2 = """
 <div style="background-color:#800080;padding:1.5px">
-<h1 style="color:white;text-align:center;">Faire des exercices pour régulariser mon taux de glycémie 🏃🏻‍♂️</h1>
+<h1 style="color:white;text-align:center;">
+    <a href="/DiabExercices" style="color:white;text-decoration:none;">Faire des exercices pour régulariser mon taux de glycémie 🏃🏻‍♂️</a>
+</h1>
 </div><br>"""
 st.markdown(html_temp2,unsafe_allow_html=True)
 
 html_temp3 = """
 <div style="background-color:#800080;padding:1.5px">
-<h1 style="color:white;text-align:center;">Mon espace personnel 🔒</h1>
+<h1 style="color:white;text-align:center;">
+    <a href="/Mon_Espace_DiabINT" style="color:white;text-decoration:none;">Mon espace personnel 🔒</a>
+</h1>
 </div><br>"""
 st.markdown(html_temp3,unsafe_allow_html=True)
 
