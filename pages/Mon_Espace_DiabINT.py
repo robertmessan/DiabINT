@@ -76,18 +76,18 @@ def Diabetes_Predict():
         
         # Création d'un DataFrame avec les données entrées par l'utilisateur
         user_data = pd.DataFrame({
-            'Variable': ['glucose', 'bp', 'skin', 'insulin', 'bmi', 'dpf'],
+            'Variable': ['glucose', 'pression_artérielle', 'pli_cutané', 'insuline', 'indice_masse_corporelle', 'fonction_pedigree'],
             'Value': [glucose, bp, skin, insulin, bmi, dpf]
         })
         
         # Intervalles normaux pour chaque variable (à adapter selon les normes médicales)
         normal_ranges = {
             'glucose': (70, 140),
-            'bp': (60, 130),
-            'skin': (10, 30),
-            'insulin': (40, 90),
-            'bmi': (18.5, 30),
-            'dpf': (0.1, 1),
+            'pression_artérielle': (60, 130),
+            'pli_cutané': (10, 30),
+            'insuline': (40, 90),
+            'indice_masse_corporelle': (18.5, 30),
+            'fonction_pedigree': (0.1, 1),
         }
         submit = st.button('Prédire 🔍')
         if submit:
