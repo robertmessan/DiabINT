@@ -70,7 +70,7 @@ def Diabetes_Predict():
         #poids= st.number_input("Poids (en kg):",step=10.,key=7)
         #taille= st.number_input("Taille (en m):",step=0.1,key=7)
         #bmi=poids/(taille ** 2)
-        bmi = st.number_input("indice de masse corporelle (poids en kg/(masse en m)^2):",step=10.,key=7)
+        bmi = st.number_input("indice de masse corporelle (poids en kg/(taille en m)^2):",step=10.,key=7)
         dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques(entre 0 et 1) ?",step=0.1,key=8)
         age = st.number_input("Age:",step=5.,key=9)
         
