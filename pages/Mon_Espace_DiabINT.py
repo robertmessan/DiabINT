@@ -1,5 +1,4 @@
 import streamlit as st
-from PIL import Image
 
 import pandas as pd
 import numpy as np
@@ -13,6 +12,7 @@ from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
 import pages
 from pages import Login_and_Registration
+from PIL import Image
 
 im2=Image.open("images/logo_MonMedecin.jpg")
 st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
