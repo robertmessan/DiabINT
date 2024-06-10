@@ -26,7 +26,7 @@ def Diabetes_Predict():
         # st.button('LOGOUT')
         # Display user data
         st.write(st.session_state["user_data"])
-        username=st.session_state["user_data"][0]
+        username=st.session_state["user_data"][1]
         # st.subheader(f"Welcome!!! {username} ")
         html_temp = """
         <div style="background-color:tomato;padding:1.5px">
