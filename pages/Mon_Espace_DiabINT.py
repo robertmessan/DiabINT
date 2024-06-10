@@ -1,9 +1,6 @@
 import streamlit as st
 from PIL import Image
 
-im2=Image.open("images/logo_MonMedecin.jpg")
-st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
-
 import pandas as pd
 import numpy as np
 import plotly.express as px
@@ -17,7 +14,8 @@ from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileT
 import pages
 from pages import Login_and_Registration
 
-
+im2=Image.open("images/logo_MonMedecin.jpg")
+st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
 
 pickle_in = open('models/logisticRegr.pkl', 'rb')
 classifier = pickle.load(pickle_in)
