@@ -1,4 +1,8 @@
 import streamlit as st
+from PIL import Image
+
+im2=Image.open("images/logo_MonMedecin.jpg")
+st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
 
 import pandas as pd
 import numpy as np
@@ -11,12 +15,9 @@ import pickle
 from sendgrid import SendGridAPIClient
 from sendgrid.helpers.mail import Mail, Attachment, FileContent, FileName, FileType, Disposition
 import pages
-from PIL import Image
 from pages import Login_and_Registration
 
 
-im2=Image.open("images/logo_MonMedecin.jpg")
-#st.set_page_config(page_title="Ma Glycémie",page_icon=im2, layout="wide")
 
 pickle_in = open('models/logisticRegr.pkl', 'rb')
 classifier = pickle.load(pickle_in)
@@ -67,10 +68,10 @@ def Diabetes_Predict():
         bp =  st.number_input("Pression artérielle diastolique (mm Hg):",step=10.)
         skin = st.number_input("Épaisseur du pli cutané du triceps (mm):",step=5.)
         insulin = st.number_input("Insuline sérique sur 2 heures (mu U/ml):",step=10.)
-        #poids= st.number_input("Poids (en kg):",step=10.,key=7)
-        #taille= st.number_input("Taille (en m):",step=0.1,key=7)
-        #bmi=poids/(taille ** 2)
-        bmi = st.number_input("indice de masse corporelle (poids en kg/(taille en m)^2):",step=10.,key=7)
+        poids= st.number_input("Poids (en kg):",step=10.,key=7)
+        taille= st.number_input("Taille (en m):",step=0.1,key=7)
+        bmi=poids/(taille ** 2)
+        #bmi = st.number_input("indice de masse corporelle (poids en kg/(taille en m)^2):",step=10.,key=7)
         dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques(entre 0 et 1) ?",step=0.1,key=8)
         age = st.number_input("Age:",step=5.,key=9)
         
