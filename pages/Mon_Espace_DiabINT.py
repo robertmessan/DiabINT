@@ -62,7 +62,7 @@ def Diabetes_Predict():
         st.header('Diabetes Monitoring System')
         name = st.text_input("Entrez votre nom:",value=username)
         pregnancy = st.number_input("Nombre de grossesse(s) si vous êtes une femme:",step=1)
-        glucose = st.number_input("Concentration du Glucose sanguin :",step=10.)
+        glucose = st.number_input("Concentration du Glucose sanguin(2 heures après un repas) :",step=10.)
         bp =  st.number_input("Pression artérielle diastolique (mm Hg):",step=10.)
         skin = st.number_input("Épaisseur du pli cutané du triceps (mm):",step=5.)
         insulin = st.number_input("Insuline sérique sur 2 heures (mu U/ml):",step=10.)
