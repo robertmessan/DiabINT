@@ -34,7 +34,7 @@ st.image(image, use_column_width=True)
 html_temp = """
 <div style="background-color:#800080;padding:1.5px">
 <h1 style="color:white;text-align:center;">
-  <a href="/DiabInfo" style="color:white;text-decoration:none;">m'informer sur le diabète 📃</a>
+  <a href="/DiabInfo" style="color:white;text-decoration:none;">M'informer sur le diabète 📃</a>
 </h1>
 </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
