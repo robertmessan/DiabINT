@@ -199,8 +199,8 @@ fh = {"Non": 0, "Oui": 1}
 family_history = st.selectbox("Avez-vous des membres de votre famille ayant le diabète?", list(fh.keys()))
 family_history_binary= fh[family_history]
 physical_activity = st.number_input("Entrez votre niveau d'activité physique (en minuite par semaine): ",step=10.)
-diastolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle (1ère prise):",step=10.)
-systolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle(2ème prise):",step=10.)
+diastolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle (1ère prise en mmHg):",step=10.)
+systolic_pressure = st.number_input("Saisissez l'historique de votre tension artérielle(2ème prise en mmHg):",step=10.)
 
 submit = st.button('Prédire 🔍')
 
