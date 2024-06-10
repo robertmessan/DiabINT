@@ -35,7 +35,7 @@ html_temp = """
                     <h3 style="color:#000;text-align:center;">Faire mon test pour <span style="color:red;font-size:35px;">LE DIABETE</span> en  "quelques Questions"</h3>
                     </div><br>"""
 st.markdown(html_temp,unsafe_allow_html=True)
-Age = st.number_input("Entrez votre age:",step=10.0)
+Age = st.number_input("Entrez votre age:",step=10)
 
 # Define variables to store the selected options
 selected_options = []
