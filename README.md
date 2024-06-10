@@ -4,7 +4,7 @@ Une application streamlit qui permet aux patients diabétiques de suivre leur é
 
 ## Data
 
-Les données proviennent de [National Institute of Diabetes and Digestive and Kidney Diseases](https://www.niddk.nih.gov/) and is [available on Kaggle.](https://www.kaggle.com/uciml/pima-indians-diabetes-database)
+Les données proviennent de [National Institute of Diabetes and Digestive and Kidney Diseases](https://www.niddk.nih.gov/), [ Kaggle.](https://www.kaggle.com/uciml/pima-indians-diabetes-database), [USDA](https://www.usda.gov/) et [data.gouv.fr](https://www.data.gouv.fr/fr/)
 ## Pre-requis
 
 
