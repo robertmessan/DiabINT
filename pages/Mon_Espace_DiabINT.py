@@ -61,7 +61,7 @@ def Diabetes_Predict():
         
         st.header('Diabetes Monitoring System')
         name = st.text_input("Entrez votre nom:",value=username)
-        pregnancy = st.number_input("Nombre de grossesse(s) si vous êtes une femme:",step=1.)
+        pregnancy = st.number_input("Nombre de grossesse(s) si vous êtes une femme:",step=1)
         glucose = st.number_input("Concentration du Glucose sanguin :",step=10.)
         bp =  st.number_input("Pression artérielle diastolique (mm Hg):",step=10.)
         skin = st.number_input("Épaisseur du pli cutané du triceps (mm):",step=5.)
@@ -71,7 +71,7 @@ def Diabetes_Predict():
         #bmi=poids/(taille ** 2)
         bmi = st.number_input("indice de masse corporelle (poids en kg/(taille en m)^2):",step=10.,key=7)
         dpf = st.number_input("Fonction Pedigree de Diabetes(sur 100 membres de votre famille, combien sont diabétiques(entre 0 et 1) ?",step=0.1,key=8)
-        age = st.number_input("Age:",step=5.,key=9)
+        age = st.number_input("Age:",step=5,key=9)
         
         # Création d'un DataFrame avec les données entrées par l'utilisateur
         user_data = pd.DataFrame({
