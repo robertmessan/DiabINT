@@ -71,12 +71,12 @@ df = pd.read_csv("data/countrywise_data.csv")
 st.subheader('Estimation du diabète (20-79 ans)')
 
 # Create a selectbox for the user to choose the year
-year = st.selectbox("Select a Year", ["2000", "2011", "2021", "2030", "2045"])
+year = st.selectbox("Sélectionner une année", ["2000", "2011", "2021", "2030", "2045"])
 
 # Create a choropleth map chart using Plotly Express
 fig = px.choropleth(df, locations="Country/Territory", locationmode="country names",
                     color=year, hover_name="Country/Territory", range_color=[0, 20],
-                    title=f"Prévalence du diabète par pays en {year}", width=800, height=600,template = "plotly_dark")
+                    title=f"Prévalence du diabète en (%) par pays en {year}", width=800, height=600,template = "plotly_dark")
 fig.update_layout(geo=dict(showframe=False, showcoastlines=False, projection_type="equirectangular"))
 
 # Display the map chart in Streamlit
