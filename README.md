@@ -11,7 +11,7 @@ Les données proviennent de [National Institute of Diabetes and Digestive and Ki
 - Pandas
 - Numpy
 - Scikit-learn
-- Pandas-profiling(renamed as ydata_profiling)
+- Pandas
 - pickle
 - Streamlit
 
