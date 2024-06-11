@@ -65,7 +65,7 @@ def Diabetes_Predict():
         glucose = st.number_input("Concentration du Glucose sanguin(2 heures après un repas) :",step=10.)
         bp =  st.number_input("Pression artérielle diastolique (mm Hg):",step=10.)
         skin = st.number_input("Épaisseur du pli cutané du triceps (mm):",step=5.)
-        insulin = st.number_input("Insuline sérique sur 2 heures (mu U/ml):",step=10.)
+        insulin = st.number_input("Insuline sérique sur 2 heures (μU/ml):",step=10.)
         #poids= st.number_input("Poids (en kg):",step=10.,key=7)
         #taille= st.number_input("Taille (en m):",step=0.1,key=7)
         #bmi=poids/(taille ** 2)
