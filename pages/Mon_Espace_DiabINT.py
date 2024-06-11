@@ -201,7 +201,7 @@ def Diabetes_Predict():
             
     except Exception as e:
         Login_and_Registration.loginAndRegister()
-        st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le loggin")
+        st.write("Cliquez à nouveau sur la section Mon Espace DiabINT pour avoir accès à votre espace après le login")
 
     
 if __name__ == "__main__":
