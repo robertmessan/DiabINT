@@ -84,7 +84,7 @@ def Diabetes_Predict():
             'glucose': (70, 140),
             'pression_artérielle': (60, 130),
             'pli_cutané': (10, 30),
-            'insuline': (40, 90),
+            'insuline': (glucose-20, glucose +20),
             'indice_masse_corporelle': (18.5, 30),
             'fonction_pedigree': (0.1, 1),
         }
