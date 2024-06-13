@@ -15,7 +15,7 @@ Les données proviennent de [National Institute of Diabetes and Digestive and Ki
 - pickle
 - Streamlit
 
-## Sources
+## Ressources
 
 [Kaggle](https://kaggle.com/) 
 [Streamlit](https://www.streamlit.io/)
