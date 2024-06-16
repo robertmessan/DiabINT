@@ -186,7 +186,7 @@ html_temp = """
                     </div><br>""" 
 st.markdown(html_temp,unsafe_allow_html=True)  
     
-age = st.number_input("Entrez votre âge:",step=5.)
+age = st.number_input("Entrez votre âge:",step=5)
 poids=st.number_input("Entrez votre poids (en Kg):",step=5.)
 taille=st.number_input("Entrez votre taille (en m):",value=taille,step=0.1)
 bmi=poids/(taille**2)
